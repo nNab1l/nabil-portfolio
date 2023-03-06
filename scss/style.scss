@@ -1,0 +1,10 @@
+@use "./abstracts/reset";
+@use "./base.scss";
+@use "./components/nav.scss";
+@use "./components/projects.scss";
+@use "./components/aboutme.scss";
+@use "./components/skills.scss";
+
+
+/*mediaqueries*/
+@use "./abstracts/mediaqueries";

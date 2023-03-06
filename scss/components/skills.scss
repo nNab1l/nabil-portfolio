@@ -1,0 +1,103 @@
+.skills{
+    margin-top: 30rem;
+    margin-bottom: 20rem;
+    //background: #f3f0f9;
+    padding: 5rem;
+}
+
+.skills__icon{
+    color: #707070;
+}
+
+.skills__icon--first:hover{
+    color: rgb(213, 211, 81);
+    transition: 0.2s;
+}
+
+.skills__icon--second:hover{
+    color: rgb(224, 96, 117);
+    transition: 0.2s;
+}
+
+.skills__icon--third:hover{
+    color: orangered;
+    transition: 0.2s;
+}
+
+.skills__icon--fourth:hover{
+    color: rgb(65, 65, 255);
+    transition: 0.2s;
+}
+
+.skills__list{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills__listitem{
+    border: 0.2rem solid rgb(255, 255, 255);
+    width: 40rem;
+    box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.2);
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.5rem;
+    flex-direction: column;
+    background: #f7f7f7;
+    position: relative;
+}
+
+.skills__listitem::before{
+    background: radial-gradient(
+        80rem circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.1),
+        transparent 40%
+    );
+    border-radius: inherit;
+    content: "";
+    opacity: 0;
+    transition: opacity 500ms;
+    height: 100%;
+    left: 0rem;
+    position: absolute;
+    top: 0rem;
+    width: 100%;
+    z-index: 2;
+}
+
+.skills__listitem:hover::before{
+    opacity: 1;
+}
+
+
+.skills__p{
+    font-size: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: #707070;
+}
+
+.skills__h3{
+    font-size: 4.5rem;
+    color: #707070;
+}
+
+.dark-mode{
+    background: rgb(37, 37, 37);
+    color: white;
+}
+
+.skills__wrapper{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    color: #707070;
+}
+
+.skills__heading{
+    font-size: 5.5rem;
+}
