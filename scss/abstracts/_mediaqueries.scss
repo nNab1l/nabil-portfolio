@@ -1,19 +1,30 @@
+@media screen and (max-width: 68.75rem){
+
+    .circle--first{
+        bottom: 45%;
+    }
+
+    .circle--fifth{
+        display: none;
+    }
+
+}
+
+
+
+
 
 @media screen and (max-width: 50rem){
-    .frontpage__sidenav{
-        width: 100%;
-        margin-left: 0;
-        height: 5rem;
-        margin-top: 54.5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 10rem;
-        border-radius: 0%;
+    .info{
+        padding: 5rem;
+    }
+    .projects__cards{
+        padding: 5rem;
     }
 
-    i{
-        position: relative;
-        bottom: 3rem;
+    .frontpage__sidenav{
+        width: 5rem;
+        margin-left: 1rem;
     }
+  
 }

@@ -17,6 +17,20 @@ body {
   overflow-x: hidden;
 }
 
+.darkMode {
+  background: rgb(37, 37, 37);
+  color: white;
+  transition: 0.5s;
+}
+
+.darkModeText {
+  color: white;
+}
+
+.darkModeCircle {
+  background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
+}
+
 .nav {
   display: flex;
   list-style: none;
@@ -97,6 +111,10 @@ body {
   background: #F3F0F9;
   border-radius: 50%;
   position: absolute;
+}
+
+.nav__moon {
+  cursor: pointer;
 }
 
 .circle--first {
@@ -283,6 +301,7 @@ img {
   flex-direction: column;
   background: #f7f7f7;
   position: relative;
+  border-radius: 1.5rem;
 }
 
 .skills__listitem::before {
@@ -331,21 +350,24 @@ img {
   font-size: 5.5rem;
 }
 
-@media screen and (max-width: 50rem) {
-  .frontpage__sidenav {
-    width: 100%;
-    margin-left: 0;
-    height: 5rem;
-    margin-top: 54.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10rem;
-    border-radius: 0%;
+@media screen and (max-width: 68.75rem) {
+  .circle--first {
+    bottom: 45%;
   }
-  i {
-    position: relative;
-    bottom: 3rem;
+  .circle--fifth {
+    display: none;
+  }
+}
+@media screen and (max-width: 50rem) {
+  .info {
+    padding: 5rem;
+  }
+  .projects__cards {
+    padding: 5rem;
+  }
+  .frontpage__sidenav {
+    width: 5rem;
+    margin-left: 1rem;
   }
 }
 /*mediaqueries*/
