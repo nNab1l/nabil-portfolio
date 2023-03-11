@@ -123,4 +123,20 @@
     z-index: -1;
 }
 
+.darkModeText{
+    color: white;
+    transition: 0.5s;
+}
+
+
+.darkModeCircle{
+    background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
+    transition: 2s;
+}
+
+.darkMode{
+    background: rgb(37, 37, 37);
+    color: white;
+    transition: 0.5s;
+}
 

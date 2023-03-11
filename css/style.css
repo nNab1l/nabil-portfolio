@@ -17,20 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-.darkMode {
-  background: rgb(37, 37, 37);
-  color: white;
-  transition: 0.5s;
-}
-
-.darkModeText {
-  color: white;
-}
-
-.darkModeCircle {
-  background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
-}
-
 .nav {
   display: flex;
   list-style: none;
@@ -145,6 +131,22 @@ body {
   z-index: -1;
 }
 
+.darkModeText {
+  color: white;
+  transition: 0.5s;
+}
+
+.darkModeCircle {
+  background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
+  transition: 2s;
+}
+
+.darkMode {
+  background: rgb(37, 37, 37);
+  color: white;
+  transition: 0.5s;
+}
+
 .projects {
   margin-top: 35rem;
 }
@@ -251,6 +253,11 @@ img {
   margin-top: 5rem;
 }
 
+.darkModeText {
+  color: white;
+  transition: 0.5s;
+}
+
 .skills {
   margin-top: 30rem;
   margin-bottom: 20rem;
@@ -350,10 +357,25 @@ img {
   font-size: 5.5rem;
 }
 
+.darkModeCircle {
+  background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
+  transition: 2s;
+}
+
+.darkModeBox {
+  background: rgb(37, 37, 37);
+  color: white;
+  transition: 0.5s;
+  border: 0.1rem solid rgb(105, 105, 105);
+}
+
+.darkMode {
+  background: rgb(37, 37, 37);
+  color: white;
+  transition: 0.5s;
+}
+
 @media screen and (max-width: 68.75rem) {
-  .circle--first {
-    bottom: 45%;
-  }
   .circle--fifth {
     display: none;
   }
@@ -363,11 +385,18 @@ img {
     padding: 5rem;
   }
   .projects__cards {
-    padding: 5rem;
+    padding: 2rem;
   }
   .frontpage__sidenav {
     width: 5rem;
     margin-left: 1rem;
+  }
+  .nav {
+    margin-right: 1rem;
+    max-width: 100%;
+  }
+  .nav__listitem {
+    font-size: 1.6rem;
   }
 }
 /*mediaqueries*/

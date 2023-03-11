@@ -1,8 +1,9 @@
 @media screen and (max-width: 68.75rem){
 
     .circle--first{
-        bottom: 45%;
+        
     }
+
 
     .circle--fifth{
         display: none;
@@ -19,12 +20,26 @@
         padding: 5rem;
     }
     .projects__cards{
-        padding: 5rem;
+        padding: 2rem;
     }
 
     .frontpage__sidenav{
         width: 5rem;
         margin-left: 1rem;
     }
+
+    .nav{
+        margin-right: 1rem;
+        max-width: 100%;
+    }
+
+    .nav__listitem{
+        font-size: 1.6rem;
+    }
+
+    
+
+
+    
   
 }

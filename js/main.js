@@ -31,28 +31,96 @@ document.querySelector(".nav__moon").addEventListener("click", function () {
   }
 });
 
+
 function addDarkMode() {
   darkMode = localStorage.setItem("darkMode", "true");
   document.getElementsByTagName("body")[0].classList.add("darkMode");
-  document.getElementsByTagName("li")[0].classList.add("darkModeText");
-  document.getElementsByTagName("li")[1].classList.add("darkModeText");
-  document.getElementsByTagName("li")[2].classList.add("darkModeText");
-  document.getElementsByTagName("li")[3].classList.add("darkModeText");
-  document.getElementsByTagName("li")[4].classList.add("darkModeText");
   document.getElementsByTagName("h1")[0].classList.add("darkModeText");
+  document.getElementsByTagName("h2")[0].classList.add("darkModeText");
+  document.getElementsByTagName("h2")[1].classList.add("darkModeText");
+  document.getElementsByTagName("h2")[2].classList.add("darkModeText");
+  document.getElementsByTagName("p")[12].classList.add("darkModeText");
   document.getElementsByTagName("figure")[0].classList.add("darkModeCircle");
+  document.getElementsByTagName("figure")[1].classList.add("darkModeCircle");
+  document.getElementsByTagName("figure")[5].classList.add("darkModeCircle");
+  document.getElementsByTagName("ul")[0].classList.add("darkMode");
+
+  const li_heading = document.querySelectorAll('.nav__listitem'); 
+  const icons = document.querySelectorAll(".sidenav__icon");
+
+  const li_skills = document.querySelectorAll('.skills__listitem'); 
+
+  
+  const p_skills = document.querySelectorAll('.skills__p'); 
+
+  const icon_skills = document.querySelectorAll('.skills__icon'); 
+
+
+  li_heading.forEach(nav => {
+  nav.classList.add('darkModeText');
+});
+
+  icons.forEach(icon => {
+  icon.classList.add('darkModeText');
+});
+
+li_skills.forEach(skills => {
+  skills.classList.add('darkModeBox');
+});
+
+p_skills.forEach(skills_p => {
+  skills_p.classList.add('darkMode');
+});
+
+icon_skills.forEach(skills_icon => {
+  skills_icon.classList.add('darkMode');
+});
+
 }
 
 function removeDarkMode() {
   darkMode = localStorage.setItem("darkMode", "false");
   document.getElementsByTagName("body")[0].classList.remove("darkMode");
-  document.getElementsByTagName("li")[0].classList.remove("darkModeText");
-  document.getElementsByTagName("li")[1].classList.remove("darkModeText");
-  document.getElementsByTagName("li")[1].classList.remove("darkModeText");
-  document.getElementsByTagName("li")[2].classList.remove("darkModeText");
-  document.getElementsByTagName("li")[3].classList.remove("darkModeText");
-  document.getElementsByTagName("li")[4].classList.remove("darkModeText");
+  document.getElementsByTagName("h1")[0].classList.remove("darkModeText");
+  document.getElementsByTagName("h2")[0].classList.remove("darkModeText");
+  document.getElementsByTagName("h2")[1].classList.remove("darkModeText");
+  document.getElementsByTagName("h2")[2].classList.remove("darkModeText");
+  document.getElementsByTagName("figure")[5].classList.remove("darkModeCircle");
+  document.getElementsByTagName("p")[12].classList.remove("darkModeText");
+
+  const li_heading = document.querySelectorAll('.nav__listitem'); 
+  const icons = document.querySelectorAll(".sidenav__icon");
+
+  
+  const li_skills = document.querySelectorAll('.skills__listitem'); 
+
+  
+  const p_skills = document.querySelectorAll('.skills__p'); 
+
+  const icon_skills = document.querySelectorAll('.skills__icon'); 
+
+  li_heading.forEach(nav => {
+    nav.classList.remove('darkModeText');
+  });
+
+  icons.forEach(icon => {
+    icon.classList.remove('darkModeText');
+  });
+
+  li_skills.forEach(skills => {
+    skills.classList.remove('darkModeBox');
+  });
+  
+  p_skills.forEach(skills_p => {
+    skills_p.classList.remove('darkMode');
+  });
+  
+  icon_skills.forEach(skills_icon => {
+    skills_icon.classList.remove('darkMode');
+  });
   document.getElementsByTagName("figure")[0].classList.remove("darkModeCircle");
+  document.getElementsByTagName("figure")[1].classList.remove("darkModeCircle");
+  document.getElementsByTagName("ul")[0].classList.remove("darkMode")
 }
 
 

@@ -102,3 +102,25 @@
 .skills__heading{
     font-size: 5.5rem;
 }
+
+.darkModeCircle{
+    background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
+    transition: 2s;
+}
+
+.darkModeBox{
+    background: rgb(37, 37, 37);
+    color: white;
+    transition: 0.5s;
+    border: 0.1rem solid rgb(105, 105, 105);
+}
+
+
+.darkMode{
+    background: rgb(37, 37, 37);
+    color: white;
+    transition: 0.5s;
+}
+
+
+
