@@ -1,3 +1,7 @@
+header{
+    overflow-x: hidden;
+}
+
 .nav{
     display: flex;
     list-style: none;
@@ -28,6 +32,8 @@
     position: fixed;
     z-index: 2;
 }
+
+
 
 .frontpage__h1{
     position: absolute;
@@ -99,23 +105,7 @@
 
 }
 
-.circle--third{
-    bottom: -115%;
-    left: 30%;
-    z-index: -1;
-    background: #e8ddff;
-    border-radius: 0%;
 
-}
-
-.circle--fourth{
-    bottom: -180%;
-    left: 45%;
-    z-index: -1;
-    background: #e8ddff;
-    border-radius: 0%;
-
-}
 
 .circle--second{
     right: -10%;
@@ -140,3 +130,7 @@
     transition: 0.5s;
 }
 
+a{
+    text-decoration: none;
+    color: #707070;
+}

@@ -17,16 +17,16 @@
             <div class="nav__div">
                 <li class="nav__listitem"> <i class="fa-regular fa-moon nav__moon" id="js--darkMode"></i></li>
             </div>
-            <li class="nav__listitem">Works</li>
-            <li class="nav__listitem">About</li>
-            <li class="nav__listitem">Skills</li>
-            <li class="nav__listitem">Contact</li>
+            <li class="nav__listitem"><a href="#works" class="nav__link">Works</a></li>
+            <li class="nav__listitem"><a href="#skills" class="nav__link">Skills</a></li>
+            <li class="nav__listitem"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__listitem"><a href="#contact" class="nav__link">Contact</a></li>
         </nav>
 
         <figure class="circle circle--first"></figure>
         <figure class="circle circle--second"></figure>
-        <figure class="circle circle--third"></figure>
-        <figure class="circle circle--fourth"></figure>
+        <figure></figure>
+        <figure></figure>
 
 
         <figure class="frontpage">
@@ -43,7 +43,7 @@
             <h1 class="frontpage__h1">Hello, I am Nabil <br> and I'm a <mark class="frontpage__mark"> frontend</mark>
                 <br> developer.
                 <div>
-                    <button class="frontpage__button">projects</button>
+                    <a href="#works"><button class="frontpage__button">projects</button></a>
                 </div>
             </h1>
         </figure>
@@ -51,7 +51,7 @@
 
 
 
-    <main class="main">
+    <main class="main" id="works">
         <section class="projects">
             <div class="projects__div">
                 <h2 class="projects__heading">Projects</h2>
@@ -81,7 +81,7 @@
                     <a href="https://github.com/nNab1l/f2m4BO"><i class="fa-brands fa-github projects__icon"></i></a>
                 </li>
                 <li class="projects__card projects__card">
-                    <img src="img/Schermafbeelding 2023-03-01 212216.png" alt="">
+                    <img src="img/cart.png" alt="">
                     <p class="projects__p">Article site</p>
                     <i class="fa-brands fa-github projects__icon"></i>
                 </li>
@@ -92,7 +92,7 @@
                 </li>
             </ul>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <div class="skills__wrapper">
             <h2 class="skills__heading">My skills</h2>
             </div>
@@ -123,16 +123,31 @@
                 </li>
             </ul>
         </section>
-                <section class="info">
+                <section class="info" id="about">
             <div class="info__wrapper">
                 <figure class="info__circle info__circle--first"></figure>
             <h2 class="info__heading">About me</h2>
-            <p class="info__paragraph">A passionate <mark class="frontpage__mark">Front end developer</mark> in college
+            <p class="info__paragraph">A passionate Front end developer in college
                 based in <br> the Netherlands. I enjoy learning, especially about all things <br> technological. Shortly
                 after starting with web development, <br>I have aligned myself with front end development. For me,
                 <br>modernity and creativity are of great importance, <br> and i try to incorporate these concepts in
                 the projects i do</p>
             </div>
+        </section>
+        <section class="contact" id="contact">
+                <figure class="contact__circle contact__circle--first"></figure>
+            <h2 class="contact__heading">Let's link up!
+                <i class="fa-solid fa-link"></i>
+            </h2>
+            <p class="contact__paragraph">Let us discuss our options</p>
+            <ul class="contact__links">
+                <li class="contact__listitem"><a href="https://github.com/nNab1l"><i class="fa-brands fa-github contact__icon contact__icon--first"></i></a>
+                <p class="contact__p">Go to my Github for more projects</p></li>
+                <li class="contact__listitem"><a href="https://www.linkedin.com/in/nabil-salimi-5a5616267/"><i class="fa-brands fa-linkedin contact__icon contact__icon--second"></i></a>
+                <p class="contact__p">Let's connect on Linkedin</p></li>
+                <li class="contact__listitem"> <a href="mailto:nabilsalimi0229@gmail.com"><i class="fa-solid fa-envelope contact__icon contact__icon--third"></i></a>
+                <p class="contact__p">email me at nabilsalimi0229@gmail.com</p></li>
+            </ul>
         </section>
     </main>
 </body>

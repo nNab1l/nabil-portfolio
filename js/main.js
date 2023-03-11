@@ -39,25 +39,30 @@ function addDarkMode() {
   document.getElementsByTagName("h2")[0].classList.add("darkModeText");
   document.getElementsByTagName("h2")[1].classList.add("darkModeText");
   document.getElementsByTagName("h2")[2].classList.add("darkModeText");
+  document.getElementsByTagName("h2")[3].classList.add("darkModeText");
   document.getElementsByTagName("p")[12].classList.add("darkModeText");
+  document.getElementsByTagName("p")[13].classList.add("darkModeText");
   document.getElementsByTagName("figure")[0].classList.add("darkModeCircle");
   document.getElementsByTagName("figure")[1].classList.add("darkModeCircle");
   document.getElementsByTagName("figure")[5].classList.add("darkModeCircle");
   document.getElementsByTagName("ul")[0].classList.add("darkMode");
 
-  const li_heading = document.querySelectorAll('.nav__listitem'); 
+  const li_heading = document.querySelectorAll('.nav__link'); 
+  const li_moon = document.querySelectorAll('.nav__listitem'); 
   const icons = document.querySelectorAll(".sidenav__icon");
-
   const li_skills = document.querySelectorAll('.skills__listitem'); 
-
-  
   const p_skills = document.querySelectorAll('.skills__p'); 
-
   const icon_skills = document.querySelectorAll('.skills__icon'); 
+  const contact__icons = document.querySelectorAll(".contact__icon");
+  const contact_p = document.querySelectorAll(".contact__p");
 
 
   li_heading.forEach(nav => {
   nav.classList.add('darkModeText');
+});
+
+li_moon.forEach(moon => {
+  moon.classList.add('darkModeText');
 });
 
   icons.forEach(icon => {
@@ -76,6 +81,14 @@ icon_skills.forEach(skills_icon => {
   skills_icon.classList.add('darkMode');
 });
 
+contact__icons.forEach(contact => {
+  contact.classList.add('darkModeText');
+});
+
+contact_p.forEach(contact__p => {
+  contact__p.classList.add('darkModeText');
+});
+
 }
 
 function removeDarkMode() {
@@ -85,11 +98,16 @@ function removeDarkMode() {
   document.getElementsByTagName("h2")[0].classList.remove("darkModeText");
   document.getElementsByTagName("h2")[1].classList.remove("darkModeText");
   document.getElementsByTagName("h2")[2].classList.remove("darkModeText");
+  document.getElementsByTagName("h2")[3].classList.remove("darkModeText");
   document.getElementsByTagName("figure")[5].classList.remove("darkModeCircle");
   document.getElementsByTagName("p")[12].classList.remove("darkModeText");
 
-  const li_heading = document.querySelectorAll('.nav__listitem'); 
+  const li_heading = document.querySelectorAll('.nav__link'); 
+  const li_moon = document.querySelectorAll('.nav__listitem'); 
+
   const icons = document.querySelectorAll(".sidenav__icon");
+
+
 
   
   const li_skills = document.querySelectorAll('.skills__listitem'); 
@@ -99,8 +117,16 @@ function removeDarkMode() {
 
   const icon_skills = document.querySelectorAll('.skills__icon'); 
 
+  const contact__icons = document.querySelectorAll(".contact__icon");
+  
+  const contact_p = document.querySelectorAll(".contact__p");
+  
   li_heading.forEach(nav => {
     nav.classList.remove('darkModeText');
+  });
+
+  li_moon.forEach(moon => {
+    moon.classList.remove('darkModeText');
   });
 
   icons.forEach(icon => {
@@ -118,6 +144,16 @@ function removeDarkMode() {
   icon_skills.forEach(skills_icon => {
     skills_icon.classList.remove('darkMode');
   });
+
+  contact__icons.forEach(contact => {
+    contact.classList.remove('darkModeText');
+  });
+
+  contact_p.forEach(contact__p => {
+    contact__p.classList.remove('darkModeText');
+  });
+
+  
   document.getElementsByTagName("figure")[0].classList.remove("darkModeCircle");
   document.getElementsByTagName("figure")[1].classList.remove("darkModeCircle");
   document.getElementsByTagName("ul")[0].classList.remove("darkMode")

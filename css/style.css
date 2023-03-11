@@ -6,14 +6,21 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-size: 2rem;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
   overflow-x: hidden;
 }
 
@@ -109,22 +116,6 @@ body {
   z-index: -1;
 }
 
-.circle--third {
-  bottom: -115%;
-  left: 30%;
-  z-index: -1;
-  background: #e8ddff;
-  border-radius: 0%;
-}
-
-.circle--fourth {
-  bottom: -180%;
-  left: 45%;
-  z-index: -1;
-  background: #e8ddff;
-  border-radius: 0%;
-}
-
 .circle--second {
   right: -10%;
   top: -10%;
@@ -145,6 +136,11 @@ body {
   background: rgb(37, 37, 37);
   color: white;
   transition: 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
 }
 
 .projects {
@@ -375,7 +371,71 @@ img {
   transition: 0.5s;
 }
 
+.contact {
+  margin-top: 20rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+  max-width: 100%;
+}
+
+.contact__heading {
+  font-size: 5.5rem;
+  color: #707070;
+}
+
+.contact__links {
+  display: flex;
+  gap: 15rem;
+  margin-top: 5rem;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact__listitem {
+  font-size: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__p {
+  font-size: 1.5rem;
+  color: #707070;
+  margin-top: 1rem;
+}
+
+.contact__paragraph {
+  color: #707070;
+}
+
+.contact__icon--first:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+.contact__icon--second:hover {
+  color: rgb(0, 123, 255);
+  transition: 0.5s;
+}
+
+.contact__icon--third:hover {
+  color: rgb(138, 213, 243);
+  transition: 0.5s;
+}
+
+.darkModeText {
+  color: white;
+  transition: 0.5s;
+}
+
 @media screen and (max-width: 68.75rem) {
+  body {
+    overflow-x: hidden;
+  }
   .circle--fifth {
     display: none;
   }
