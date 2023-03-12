@@ -49,7 +49,7 @@ function addDarkMode() {
 
   const li_heading = document.querySelectorAll('.nav__link'); 
   const li_moon = document.querySelectorAll('.nav__listitem'); 
-  const icons = document.querySelectorAll(".sidenav__icon");
+  const icons = document.querySelectorAll(".frontpage__sidenavicon");
   const li_skills = document.querySelectorAll('.skills__listitem'); 
   const p_skills = document.querySelectorAll('.skills__p'); 
   const icon_skills = document.querySelectorAll('.skills__icon'); 
@@ -101,11 +101,12 @@ function removeDarkMode() {
   document.getElementsByTagName("h2")[3].classList.remove("darkModeText");
   document.getElementsByTagName("figure")[5].classList.remove("darkModeCircle");
   document.getElementsByTagName("p")[12].classList.remove("darkModeText");
+  document.getElementsByTagName("p")[13].classList.remove("darkModeText");
 
   const li_heading = document.querySelectorAll('.nav__link'); 
   const li_moon = document.querySelectorAll('.nav__listitem'); 
 
-  const icons = document.querySelectorAll(".sidenav__icon");
+  const icons = document.querySelectorAll(".frontpage__sidenavicon");
 
 
 

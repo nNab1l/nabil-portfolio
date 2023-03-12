@@ -1,62 +1,68 @@
+@use "../abstracts/colors";
+
 .contact{
-    margin-top: 20rem;
+    margin-top: 40rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10rem;
     max-width: 100%;
+
+    &__heading{
+        font-size: 5.5rem;
+        color: colors.$font-color;
+    }
+
+    &__links{
+        display: flex;
+        gap: 15rem;
+        margin-top: 5rem;
+        list-style: none;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__listitem{
+        font-size: 4.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__p{
+        font-size: 1.5rem;
+        color: colors.$font-color;
+        margin-top: 1rem;
+    }
+
+    &__paragraph{
+        color: colors.$font-color;
+    }
+
+    &__icon--first:hover{
+        color: black;
+        transition: .5s;
+    }
+
+    &__icon--second:hover{
+        color: rgb(0, 123, 255);
+        transition: .5s;
+    }
+
+    &__icon--third:hover{
+        color: rgb(138, 213, 243);
+        transition: .5s;
+    }
+
+    &__darkModeText{
+        
+    }
 }
 
-.contact__heading{
-    font-size: 5.5rem;
-    color: #707070;
-}
-
-.contact__links{
-    display: flex;
-    gap: 15rem;
-    margin-top: 5rem;
-    list-style: none;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.contact__listitem{
-    font-size: 4.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact__p{
-    font-size: 1.5rem;
-    color: #707070;
-    margin-top: 1rem;
-}
-
-.contact__paragraph{
-    color: #707070;
-}
-
-.contact__icon--first:hover{
-    color: black;
-    transition: .5s;
-}
-
-.contact__icon--second:hover{
-    color: rgb(0, 123, 255);
-    transition: .5s;
-}
-
-
-.contact__icon--third:hover{
-    color: rgb(138, 213, 243);
-    transition: .5s;
-}
 
 
 .darkModeText{
-    color: white;
+    color: colors.$font-color-alt;
     transition: 0.5s;
 }

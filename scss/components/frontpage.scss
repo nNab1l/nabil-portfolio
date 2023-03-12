@@ -1,0 +1,130 @@
+@use "../abstracts/colors";
+header{
+    overflow-x: hidden;
+}
+
+.nav{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: flex-end;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    color: colors.$font-color;
+
+    &__moon{
+        cursor: pointer;
+    }
+
+    &__div{
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+}
+
+.frontpage{
+    display: flex;
+    align-items: center;
+    height: 60rem;
+
+    &__sidenav{
+        width: 6rem;
+        margin-left: 3rem;
+        list-style: none;
+        height: 45rem;
+        background: colors.$font-color-alt;
+        border-radius: 5rem;
+        box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        z-index: 2;
+    }
+
+    &__h1{
+        position: absolute;
+        left: 20%;
+        color: colors.$font-color;
+        font-size: 5.5rem;
+    }
+
+    &__button{
+        width: 20rem;
+        height: 5rem;
+        border: none;
+        background: colors.$gradient;
+        border-radius: 1rem;
+        color: colors.$font-color-alt;
+        font-size: 1.8rem;
+        box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.2);
+    }
+
+    &__button:hover{
+        cursor: pointer;
+        width: 27rem;
+        transition: 0.3s;
+    }
+
+    &__mark{
+        color: #CCBBED;
+        background: none;
+    }
+
+    &__listitem{
+        margin-top: 6.5rem;
+    }
+
+    &__sidenavicon{
+        color: colors.$font-color;
+        font-size: 3rem;
+    }
+}
+
+
+.circle{
+    height: 40rem;
+    width: 40rem;
+    background: colors.$purple;
+    border-radius: 50%;
+    position: absolute;
+
+    &--first{
+        bottom: -20%;
+        left: -10%;
+        z-index: -1;
+    }
+
+    &--second{
+        right: -10%;
+        top: -10%;
+        z-index: -1;
+    }
+}
+
+
+
+
+
+.darkModeText{
+    color: colors.$font-color-alt;
+    transition: 0.5s;
+}
+
+
+.darkModeCircle{
+    background: colors.$gradient;
+    transition: 2s;
+}
+
+.darkMode{
+    background: colors.$darkmode;
+    color: colors.$font-color-alt;
+    transition: 0.5s;
+}
+
+a{
+    text-decoration: none;
+    color: colors.$font-color;
+}
