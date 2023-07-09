@@ -27,8 +27,20 @@
     }
 
     .frontpage__sidenav{
+        width: 90%;
+        margin-top: 45rem;
+        height: 6rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        padding: auto;
+        gap: 4rem;
+    }
+
+    .frontpage__listitem{
+        margin-top: 0;
         width: 5rem;
-        margin-left: 1rem;
     }
 
     .nav{
@@ -38,6 +50,11 @@
 
     .nav__listitem{
         font-size: 1.6rem;
+        display: none;
+    }
+
+    .nav__listitem--bars{
+        display: block;
     }
 
     header{

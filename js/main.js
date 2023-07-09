@@ -17,147 +17,209 @@ for(const card of document.querySelectorAll(".skills__listitem")){
 
 
 
-let darkMode = localStorage.getItem("darkMode");
 
-if (darkMode == "true") {
-  addDarkMode();
-}
-document.querySelector(".nav__moon").addEventListener("click", function () {
-  darkMode = localStorage.getItem("darkMode");
-  if (darkMode == "true") {
-    removeDarkMode();
+
+var TxtType = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+  this.txt = fullTxt.substring(0, this.txt.length - 1);
   } else {
-    addDarkMode();
+  this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+  delta = this.period;
+  this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+  this.isDeleting = false;
+  this.loopNum++;
+  delta = 500;
+  }
+
+  setTimeout(function() {
+  that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('typewrite');
+  for (var i=0; i<elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-type');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtType(elements[i], JSON.parse(toRotate), period);
+      }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".typewrite > .wrap { border-right: 0.10em solid #CCBBED}";
+  document.body.appendChild(css);
+};
+
+var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+document.addEventListener('mousemove', function(e){
+var x = e.clientX;
+var y = e.clientY;
+cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+document.addEventListener('mousemove', function(e){
+var x = e.clientX;
+var y = e.clientY;
+cursorinner.style.left = x + 'px';
+cursorinner.style.top = y + 'px';
+});
+document.addEventListener('mousedown', function(){
+cursor.classList.add('click');
+cursorinner.classList.add('cursorinnerhover')
+});
+document.addEventListener('mouseup', function(){
+cursor.classList.remove('click')
+cursorinner.classList.remove('cursorinnerhover')
+});
+a.forEach(item => {
+item.addEventListener('mouseover', () => {
+cursor.classList.add('hover');
+});
+item.addEventListener('mouseleave', () => {
+cursor.classList.remove('hover');
+});
+})
+
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+const renderer = new THREE.WebGLRenderer({
+    canvas: document.querySelector('#bg'),
+    antialias: true
 });
 
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setClearColor( 0xffffff, 1 );
+camera.position.setZ(30);
 
-function addDarkMode() {
-  darkMode = localStorage.setItem("darkMode", "true");
-  document.getElementsByTagName("body")[0].classList.add("darkMode");
-  document.getElementsByTagName("h1")[0].classList.add("darkModeText");
-  document.getElementsByTagName("h2")[0].classList.add("darkModeText");
-  document.getElementsByTagName("h2")[1].classList.add("darkModeText");
-  document.getElementsByTagName("h2")[2].classList.add("darkModeText");
-  document.getElementsByTagName("h2")[3].classList.add("darkModeText");
-  document.getElementsByTagName("p")[12].classList.add("darkModeText");
-  document.getElementsByTagName("p")[13].classList.add("darkModeText");
-  document.getElementsByTagName("figure")[0].classList.add("darkModeCircle");
-  document.getElementsByTagName("figure")[1].classList.add("darkModeCircle");
-  document.getElementsByTagName("figure")[5].classList.add("darkModeCircle");
-  document.getElementsByTagName("ul")[0].classList.add("darkMode");
+renderer.render( scene, camera );
 
-  const li_heading = document.querySelectorAll('.nav__link'); 
-  const li_moon = document.querySelectorAll('.nav__listitem'); 
-  const icons = document.querySelectorAll(".frontpage__sidenavicon");
-  const li_skills = document.querySelectorAll('.skills__listitem'); 
-  const p_skills = document.querySelectorAll('.skills__p'); 
-  const icon_skills = document.querySelectorAll('.skills__icon'); 
-  const contact__icons = document.querySelectorAll(".contact__icon");
-  const contact_p = document.querySelectorAll(".contact__p");
+const pointLight = new THREE.PointLight(0xffffff)
+pointLight.position.set(20, 20, 20)
 
 
-  li_heading.forEach(nav => {
-  nav.classList.add('darkModeText');
-});
+const ambient = new THREE.AmbientLight(0xffffff)
 
-li_moon.forEach(moon => {
-  moon.classList.add('darkModeText');
-});
+scene.add(pointLight, ambient)
 
-  icons.forEach(icon => {
-  icon.classList.add('darkModeText');
-});
 
-li_skills.forEach(skills => {
-  skills.classList.add('darkModeBox');
-});
+const geometry = new THREE.TorusGeometry(10, 5, 100, 100);
+const material = new THREE.MeshLambertMaterial( { color: 0x8479e7   } );
 
-p_skills.forEach(skills_p => {
-  skills_p.classList.add('darkMode');
-});
+const torus = new THREE.Mesh( geometry, material );
 
-icon_skills.forEach(skills_icon => {
-  skills_icon.classList.add('darkMode');
-});
+torus.rotation.x += 3.9;
+torus.rotation.y += 9.2;
 
-contact__icons.forEach(contact => {
-  contact.classList.add('darkModeText');
-});
+torus.position.x += 40;
+torus.position.y += 10;
 
-contact_p.forEach(contact__p => {
-  contact__p.classList.add('darkModeText');
-});
+const geometry2 = new THREE.TorusGeometry(10, 4, 100, 100);
+const material2 = new THREE.MeshLambertMaterial( { color: 0x8479e7   } );
 
+const torus2 = new THREE.Mesh( geometry2, material2 );
+
+torus2.rotation.x += 3.5;
+torus2.rotation.y += 4.3;
+
+torus2.position.x += -30;
+torus2.position.y += -2;
+
+scene.add(torus, torus2)
+
+
+// Set the initial direction flag
+
+let isMovingUp = true;
+const maxHeight = 0.5; // Set the maximum height for the torus
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  if (isMovingUp) {
+    torus2.position.y += 0.005;
+  } else {
+    torus2.position.y -= 0.005; 
+  }
+
+  if (torus2.position.y >= maxHeight) {
+    isMovingUp = false;
+  } else if (torus2.position.y <= 0) {
+    isMovingUp = true;
+  }
+
+
+
+  renderer.render(scene, camera);
 }
 
-function removeDarkMode() {
-  darkMode = localStorage.setItem("darkMode", "false");
-  document.getElementsByTagName("body")[0].classList.remove("darkMode");
-  document.getElementsByTagName("h1")[0].classList.remove("darkModeText");
-  document.getElementsByTagName("h2")[0].classList.remove("darkModeText");
-  document.getElementsByTagName("h2")[1].classList.remove("darkModeText");
-  document.getElementsByTagName("h2")[2].classList.remove("darkModeText");
-  document.getElementsByTagName("h2")[3].classList.remove("darkModeText");
-  document.getElementsByTagName("figure")[5].classList.remove("darkModeCircle");
-  document.getElementsByTagName("p")[12].classList.remove("darkModeText");
-  document.getElementsByTagName("p")[13].classList.remove("darkModeText");
-
-  const li_heading = document.querySelectorAll('.nav__link'); 
-  const li_moon = document.querySelectorAll('.nav__listitem'); 
-
-  const icons = document.querySelectorAll(".frontpage__sidenavicon");
+animate();
 
 
 
+
+function resizeRenderer() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
   
-  const li_skills = document.querySelectorAll('.skills__listitem'); 
-
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
   
-  const p_skills = document.querySelectorAll('.skills__p'); 
-
-  const icon_skills = document.querySelectorAll('.skills__icon'); 
-
-  const contact__icons = document.querySelectorAll(".contact__icon");
+    renderer.setSize(width, height);
   
-  const contact_p = document.querySelectorAll(".contact__p");
+    const distance = camera.position.z;
+    const vFOV = (camera.fov * Math.PI) / 180;
+    const heightHalf = Math.tan(vFOV / 2) * distance;
+    const widthHalf = heightHalf * camera.aspect;
   
-  li_heading.forEach(nav => {
-    nav.classList.remove('darkModeText');
-  });
-
-  li_moon.forEach(moon => {
-    moon.classList.remove('darkModeText');
-  });
-
-  icons.forEach(icon => {
-    icon.classList.remove('darkModeText');
-  });
-
-  li_skills.forEach(skills => {
-    skills.classList.remove('darkModeBox');
-  });
+    camera.left = -widthHalf;
+    camera.right = widthHalf;
+    camera.top = heightHalf;
+    camera.bottom = -heightHalf;
   
-  p_skills.forEach(skills_p => {
-    skills_p.classList.remove('darkMode');
-  });
+    const torusScaleFactor = Math.min(width, height) / 350;
+    const torusPositionFactor = Math.min(width, height) / 20;
   
-  icon_skills.forEach(skills_icon => {
-    skills_icon.classList.remove('darkMode');
-  });
-
-  contact__icons.forEach(contact => {
-    contact.classList.remove('darkModeText');
-  });
-
-  contact_p.forEach(contact__p => {
-    contact__p.classList.remove('darkModeText');
-  });
-
+    torus.scale.set(torusScaleFactor, torusScaleFactor, torusScaleFactor);
+    torus2.scale.set(torusScaleFactor, torusScaleFactor, torusScaleFactor);
   
-  document.getElementsByTagName("figure")[0].classList.remove("darkModeCircle");
-  document.getElementsByTagName("figure")[1].classList.remove("darkModeCircle");
-  document.getElementsByTagName("ul")[0].classList.remove("darkMode")
-}
-
-
+    torus.position.x = torusPositionFactor;
+    torus2.position.x = -torusPositionFactor;
+    torus2.position.y = torusPositionFactor / 2;
+  
+    camera.updateProjectionMatrix();
+    renderer.render(scene, camera);
+  }
+  
+  window.addEventListener('resize', resizeRenderer);
+  

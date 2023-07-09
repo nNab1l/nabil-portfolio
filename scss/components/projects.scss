@@ -31,6 +31,8 @@
         gap: 2rem;
     }
 
+    
+
    
 
     & img{
@@ -64,6 +66,36 @@
     
 
 }
+
+.projects__tags{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects__tag{
+    width: 13rem;
+    height: 4rem;
+    background: transparent;
+    border-radius: 2.5rem;
+    border: 2px solid #CCBBED;
+}
+
+.projects__tag:hover{
+    background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
+    width: 27rem;
+    transition: 0.3s;
+  
+}
+
+.projects__tagWrapper{
+    display: flex;
+    justify-content: center;
+}
+
 
 
 

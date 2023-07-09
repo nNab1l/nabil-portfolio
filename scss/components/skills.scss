@@ -6,7 +6,7 @@
     padding: 5rem;
 
     &__icon{
-        color: colors.$font-color;
+        color: white;
     }
 
     &__list{
@@ -14,28 +14,34 @@
         list-style: none;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     &__listitem{
-        border: 0.2rem solid rgb(255, 255, 255);
         width: 40rem;
         box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.2);
-        height: 30rem;
+        height: 40rem;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 5.5rem;
         flex-direction: column;
-        background: #f7f7f7;
+        background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
         position: relative;
         border-radius: 1.5rem;
+        transform: perspective(1500px);
+        transition: 0.2s all;
+    }
+
+    &__listitem:hover{
+        transform: perspective(3000px) rotatex(10deg);
+      
     }
 
     &__listitem::before{
         background: radial-gradient(
             80rem circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.1),
+            #ccbbed94,
             transparent 40%
         );
         border-radius: inherit;
@@ -54,11 +60,12 @@
         opacity: 1;
     }
 
+
     &__p{
         font-size: 2rem;
         padding-top: 1rem;
         text-align: center;
-        color: colors.$font-color;
+        color: white;
     }
 
     &__h3{
@@ -78,11 +85,51 @@
     }
 }
 
+.skills__responsive{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skills__mockup{
+    width: 90rem;
+    height: 90rem;
+}
+
+.skills__headerWrapper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.skills__text{
+    color: #707070;
+    font-size: 2rem;
+    width: 50rem;
+    position: relative;
+    left: 7%;
+}
+
+.skills__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.skills__resHeading{
+    font-size: 5.5rem;
+    color: colors.$font-color;
+    top: 10%;
+}
+
 
 
 .darkModeCircle{
     background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
-    transition: 2s;
+    transition: 2s all;
 }
 
 .darkModeBox{
@@ -96,7 +143,27 @@
 .darkMode{
     background: rgb(37, 37, 37);
     color: colors.$font-color-alt;
-    transition: 0.5s;
+    transition: 0.5s all;
+}
+
+.skills__circle--first{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: rgba(220, 201, 255, 0.262);
+    position: absolute;
+    top: 20%;
+    left: 80%;
+}
+
+.skills__circle--second{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgba(220, 201, 255, 0.475);
+    position: absolute;
+    top: 13%;
+    right: 20%;
 }
 
 

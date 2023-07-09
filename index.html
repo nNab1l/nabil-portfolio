@@ -5,17 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nabil's Portfolio">
+    <meta name="keywords" content="github, nabil, portfolio">
     <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="img/circle-removebg-preview.png">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
-    <script src="https://kit.fontawesome.com/a8f4354635.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.js"></script>
+    <script type="module" src="js/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<canvas id="bg"></canvas>
 
 <body>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
     <header>
         <nav class="nav">
+
+
+
             <div class="nav__div">
-                <li class="nav__listitem"> <i class="fa-regular fa-moon nav__moon" id="js--darkMode"></i></li>
+                <li class="nav__listitem--bars"><i class="fa-solid fa-bars-staggered"></i></li>
             </div>
             <li class="nav__listitem"><a href="#works" class="nav__link">Works</a></li>
             <li class="nav__listitem"><a href="#skills" class="nav__link">Skills</a></li>
@@ -23,8 +33,8 @@
             <li class="nav__listitem"><a href="#contact" class="nav__link">Contact</a></li>
         </nav>
 
-        <figure class="circle circle--first"></figure>
-        <figure class="circle circle--second"></figure>
+        <!-- <figure class="circle circle--first"></figure>
+        <figure class="circle circle--second"></figure> -->
         <figure></figure>
         <figure></figure>
 
@@ -40,8 +50,11 @@
                 <li class="frontpage__listitem"><i class="fa-solid fa-language frontpage__sidenavicon"></i></li>
                 </div>
             </ul>
-            <h1 class="frontpage__h1">Hello, I am Nabil <br> and I'm a <mark class="frontpage__mark"> frontend</mark>
-                <br> developer.
+            <h1 class="frontpage__h1">
+                <a href="" class="typewrite" data-period="2000"
+                    data-type='[ "Hello, I am Nabil.", "I am Creative.", "I Love Design.", "I Love to Develop.", "Big changes made simple."]'>
+                    <span class="wrap"></span>
+                </a>
                 <div>
                     <a href="#works"><button class="frontpage__button">projects</button></a>
                 </div>
@@ -54,7 +67,7 @@
     <main class="main" id="works">
         <section class="projects">
             <div class="projects__div">
-                <h2 class="projects__heading">Projects</h2>
+                <h2 class="projects__heading">Projects<mark class="frontpage__mark">.</mark></h2>
             </div>
             <ul class="projects__cards">
 
@@ -78,15 +91,18 @@
                 <li class="projects__card projects__card">
                     <img src="img/tulp.png" alt="dutch travel agency site frontpage">
                     <p class="projects__p">Travel agency site</p>
-                    <a href="https://github.com/nNab1l/tulpreizen"><i class="fa-brands fa-github projects__icon"></i></a>
+                    <a href="https://github.com/nNab1l/tulpreizen"><i
+                            class="fa-brands fa-github projects__icon"></i></a>
                 </li>
                 <li class="projects__card projects__card">
                     <img src="img/cart.png" alt="shopping cart system page">
                     <p class="projects__p">shopping cart system</p>
-                    <a href="https://github.com/nNab1l/Shopping-cart"><i class="fa-brands fa-github projects__icon"></i></a>
+                    <a href="https://github.com/nNab1l/Shopping-cart"><i
+                            class="fa-brands fa-github projects__icon"></i></a>
                 </li>
                 <li class="projects__card projects__card">
-                    <img src="img/Schermafbeelding 2023-03-01 213903.png" alt="font generation app with darkmode toggle option">
+                    <img src="img/Schermafbeelding 2023-03-01 213903.png"
+                        alt="font generation app with darkmode toggle option">
                     <p class="projects__p">Font generator app with darkmode</p>
                     <a href="https://github.com/nNab1l/font-app"><i class="fa-brands fa-github projects__icon"></i></a>
                 </li>
@@ -94,61 +110,103 @@
         </section>
         <section class="skills" id="skills">
             <div class="skills__wrapper">
-            <h2 class="skills__heading">My skills</h2>
+                <h2 class="skills__heading">My skills<mark class="frontpage__mark">.</mark></h2>
             </div>
             <ul class="skills__list">
                 <li class="skills__listitem">
+                    <figure class="skills__circle--first"></figure>
+                    <figure class="skills__circle--second"></figure>
                     <i class="fa-brands fa-square-js skills__icon skills__icon--first"></i>
                     <p class="skills__p">Able to make various Javascript powered functionalities, such as Darkmode</p>
                 </li>
                 <li class="skills__listitem">
+                    <figure class="skills__circle--first"></figure>
+                    <figure class="skills__circle--second"></figure>
                     <i class="fa-brands fa-sass skills__icon  skills__icon--second"></i>
-                    <p class="skills__p">Experience with using SCSS and familiar <br> with using nesting, mixins and variables</p>
+                    <p class="skills__p">Experience with using SCSS and familiar <br> with using nesting, mixins and
+                        variables</p>
                 </li>
                 <li class="skills__listitem">
+                    <figure class="skills__circle--first"></figure>
+                    <figure class="skills__circle--second"></figure>
                     <i class="fa-brands fa-html5 skills__icon  skills__icon--third"></i>
-                    <p class="skills__p">Experience in writing semantic <br>and concise HTML. I make use of the <br> bem methodology resulting <br> in scalable and clear code</p>
+                    <p class="skills__p">Experience in writing semantic <br>and concise HTML. I make use of the <br> bem
+                        methodology resulting <br> in scalable and clear code</p>
                 </li>
                 <li class="skills__listitem">
+                    <figure class="skills__circle--first"></figure>
+                    <figure class="skills__circle--second"></figure>
                     <i class="fa-brands fa-css3-alt skills__icon  skills__icon--fourth"></i>
-                    <p class="skills__p">Familiar with the core <br>components, usage of rem for accesibility, <br>familiar with minifying for performance. </p>
+                    <p class="skills__p">Familiar with the core <br>components, usage of rem for accesibility,
+                        <br>familiar with minifying for performance. </p>
                 </li>
                 <li class="skills__listitem">
+                    <figure class="skills__circle--first"></figure>
+                    <figure class="skills__circle--second"></figure>
                     <h3 class="skills__icon">UX</h3>
-                    <p class="skills__p">Has made lots of wireframes, experience with collaborating on wireframes and realizing them</p>
+                    <p class="skills__p">Has made lots of wireframes, experience with collaborating on wireframes and
+                        realizing them</p>
                 </li>
                 <li class="skills__listitem">
+                    <figure class="skills__circle--first"></figure>
+                    <figure class="skills__circle--second"></figure>
                     <h3 class="skills__icon">{JSON}</h3>
-                    <p class="skills__p">Familiarity with using API's to create things such as a real time weather displayer and fetching data from JSON files</p>
+                    <p class="skills__p">Familiarity with using API's to create things such as a real time weather
+                        displayer and fetching data from JSON files</p>
                 </li>
             </ul>
+
         </section>
-                <section class="info" id="about">
+        <section class="skills__responsivity">
+            <div class="skills__headerWrapper">
+                <h2 class="skills__resHeading">Responsive design<mark class="frontpage__mark">.</mark></h2>
+            </div>
+           <article class="skills__responsive">
+            <p class="skills__text">Responsivity is one of my favorite parts during the development of a website as it
+                adds a new layer of creativity and flexibility. Switching things up to further enhance user friendliness
+                while still retaining the same aesthetic are my core principles of responsivity. In past projects i have
+                always made it my priority to make the most impactful changes in the most simple way as i am always
+                looking for ways to make the biggest concepts simple.</p>
+            <figure class="skills__mockup">
+                <img src="img/phone.webp" alt="" class="skills__img">
+            </figure>
+            </article>
+        </section>
+        <section class="info" id="about">
             <div class="info__wrapper">
-                <figure class="info__circle info__circle--first"></figure>
-            <h2 class="info__heading">About me</h2>
-            <p class="info__paragraph">A passionate Front end developer in college
-                based in <br> the Netherlands. I enjoy learning, especially about all things <br> technological. Shortly
-                after starting with web development, <br>I have aligned myself with front end development. For me,
-                <br>modernity and creativity are of great importance, <br> and i try to incorporate these concepts in
-                the projects i do</p>
+                <h2 class="info__heading">About me<mark class="frontpage__mark">.</mark></h2>
+                <p class="info__paragraph">A passionate Front end developer in college
+                    based in <br> the Netherlands. I enjoy learning, especially about all things <br> technological.
+                    Shortly
+                    after starting with web development, <br>I have aligned myself with front end development. For me,
+                    <br>modernity and creativity are of great importance, <br> and i try to incorporate these concepts
+                    in
+                    the projects i do
+                </p>
             </div>
         </section>
         <section class="contact" id="contact">
-                <figure class="contact__circle contact__circle--first"></figure>
+            <figure class="contact__circle contact__circle--first"></figure>
             <h2 class="contact__heading">Let's link up!
                 <i class="fa-solid fa-link"></i>
             </h2>
             <p class="contact__paragraph">Let us discuss our options</p>
             <ul class="contact__links">
-                <li class="contact__listitem"><a href="https://github.com/nNab1l"><i class="fa-brands fa-github contact__icon contact__icon--first"></i></a>
-                <p class="contact__p">Go to my Github for more projects</p></li>
-                <li class="contact__listitem"><a href="https://www.linkedin.com/in/nabil-salimi-5a5616267/"><i class="fa-brands fa-linkedin contact__icon contact__icon--second"></i></a>
-                <p class="contact__p">Let's connect on Linkedin</p></li>
-                <li class="contact__listitem"> <a href="mailto:nabilsalimi0229@gmail.com"><i class="fa-solid fa-envelope contact__icon contact__icon--third"></i></a>
-                <p class="contact__p">email me at nabilsalimi0229@gmail.com</p></li>
+                <li class="contact__listitem"><a href="https://github.com/nNab1l"><i
+                            class="fa-brands fa-github contact__icon contact__icon--first"></i></a>
+                    <p class="contact__p">Go to my Github for more projects</p>
+                </li>
+                <li class="contact__listitem"><a href="https://www.linkedin.com/in/nabil-salimi-5a5616267/"><i
+                            class="fa-brands fa-linkedin contact__icon contact__icon--second"></i></a>
+                    <p class="contact__p">Let's connect on Linkedin</p>
+                </li>
+                <li class="contact__listitem"> <a href="mailto:nabilsalimi0229@gmail.com"><i
+                            class="fa-solid fa-envelope contact__icon contact__icon--third"></i></a>
+                    <p class="contact__p">email me at nabilsalimi0229@gmail.com</p>
+                </li>
             </ul>
         </section>
     </main>
 </body>
+
 </html>
