@@ -8,7 +8,6 @@
     <meta name="description" content="Nabil's Portfolio">
     <meta name="keywords" content="github, nabil, portfolio">
     <title>Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="img/circle-removebg-preview.png">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.js"></script>
     <script type="module" src="js/main.js" defer></script>
@@ -42,7 +41,8 @@
                             class="fa-brands fa-linkedin frontpage__sidenavicon"></a></i></li>
                 <li class="frontpage__listitem"> <a href="mailto:nabilsalimi0229@gmail.com"><i
                             class="fa-solid fa-envelope frontpage__sidenavicon"></a></i></li>
-                <li class="frontpage__listitem"><i class="fa-solid fa-language frontpage__sidenavicon"></i></li>
+                <li class="frontpage__listitem"> <a href="https://discordapp.com/users/626027716474306561"><i
+                    class="fa-brands fa-discord frontpage__sidenavicon"></a></i></li>
                 </div>
             </ul>
             <h1 class="frontpage__h1">
@@ -62,7 +62,7 @@
     <main class="main" id="works">
         <section class="projects">
             <div class="projects__div">
-                <h2 class="projects__heading">Projects<mark class="frontpage__mark">.</mark></h2>
+                <h2 class="projects__heading">Featured Project<mark class="frontpage__mark">.</mark></h2>
             </div>
             <article class="projects__featured">
                 <figure class="projects__featuredCard">
@@ -73,46 +73,115 @@
                     <p class="projects__p">An optical recognition App (OCR) capable of recognizing text in an image and
                         translating it to the desired language. It uses the advanced Tesseract library for extracting
                         the text from the image. Additionally it uses techniques like binarisation to further enhance
-                        it's accuracy. the app is still fully in development click to read more about what is coming in the future
+                        it's accuracy. the app is still fully in development and is getting much more functionalities.
                     </p>
-                    <button class="projects__button">Read more</button>
+                    <!-- <button class="projects__button">Read more</button> -->
                 </div>
             </article>
+            <div class="projects__contentWrapper">
+                <h2 class="projects__contentTitle">Projects<mark class="frontpage__mark">.</mark></h2>
+            </div>
             <article class="projects__content">
                 <ul class="projects__list">
                     <li class="projects__listitem" data-target="slider1">
                         <div class="projects__wrap2">
                         <figure class="projects__figure">
+                            <div class="projects__iconwrapper">
+                                <a href="https://github.com/nNab1l/Udemy-Eindopdracht">
+                                    <i class="fa-brands fa-github projects__icon"></i>
+                                </a>
+                            </div>
                             <img src="img/udemy.png" alt="" class="projects__img">
                         </figure>
                         </div>
                         <div class="projects__wrap">
                       
-                        <h2 class="projects__title">udemy</h2>
-                        <p>test</p>
+                        <h2 class="projects__title">udemy clone</h2>
+                        <p class="projects__description">A clone of the udemy homepage made with html and scss.</p>
                         </div>
                     </li>
                     <li class="projects__listitem" data-target="slider2">
                         <div class="projects__wrap2">
                             <figure class="projects__figure">
+                                <div class="projects__iconwrapper">
+                                    <a href="https://github.com/nNab1l/darkmode">
+                                        <i class="fa-brands fa-github projects__icon"></i>
+                                    </a>
+                                </div>
                                 <img src="img/dark.png" alt="" class="projects__img">
                             </figure>
                         </div>
                         <div class="projects__wrap">
                         <h2 class="projects__title">Shopping cart interface <br> with darkmode</h2>
-                        <p>test</p>
+                        <p class="projects__description">simple interface for a shopping cart system made with html css and javascript</p>
                         </div>
                     </li>
                     <li class="projects__listitem" data-target="slider3">
                         <div class="projects__wrap2">
                             <figure class="projects__figure">
-                                <img src="img/ocr-preview.png" alt="" class="projects__img">
+                                <div class="projects__iconwrapper">
+                                    <a href="https://github.com/nNab1l/tulpreizen">
+                                        <i class="fa-brands fa-github projects__icon"></i>
+                                    </a>
+                                </div>
+                                <img src="img/tulp.png" alt="" class="projects__img">
                             </figure>
                             </div>
                         <div class="projects__wrap">
                       
-                        <h2 class="projects__title">Shopping cart interface <br> with darkmode</h2>
-                        <p>test</p>
+                        <h2 class="projects__title">Travel agency landing <br> page</h2>
+                        <p class="projects__description">landing page made with html and scss. </p>
+                        </div>
+                    </li>
+                    <li class="projects__listitem" data-target="slider3">
+                        <div class="projects__wrap2">
+                            <figure class="projects__figure">
+                                <div class="projects__iconwrapper">
+                                    <a href="https://github.com/nNab1l/M7PROG/tree/main/colorpicker">
+                                        <i class="fa-brands fa-github projects__icon"></i>
+                                    </a>
+                                </div>
+                                <img src="img/color.png" alt="" class="projects__img">
+                            </figure>
+                            </div>
+                        <div class="projects__wrap">
+                      
+                        <h2 class="projects__title">Colorpicker app</h2>
+                        <p class="projects__description">a generative color picker app that allows the user to copy the color's code when it is clicked. Made with html css and javascript</p>
+                        </div>
+                    </li>
+                    <li class="projects__listitem" data-target="slider3">
+                        <div class="projects__wrap2">
+                            <figure class="projects__figure">
+                                <div class="projects__iconwrapper">
+                                    <a href="https://github.com/nNab1l/Shopping-cart">
+                                        <i class="fa-brands fa-github projects__icon"></i>
+                                    </a>
+                                </div>
+                                <img src="img/cart.png" alt="" class="projects__img">
+                            </figure>
+                            </div>
+                        <div class="projects__wrap">
+                      
+                        <h2 class="projects__title">Shopping cart system</h2>
+                        <p class="projects__description">simple shopping cart system that makes use of modals. Made with html css and javascript</p>
+                        </div>
+                    </li>
+                    <li class="projects__listitem" data-target="slider3">
+                        <div class="projects__wrap2">
+                            <figure class="projects__figure">
+                                <div class="projects__iconwrapper">
+                                    <a href="https://github.com/nNab1l/Collection-of-Happiness">
+                                        <i class="fa-brands fa-github projects__icon"></i>
+                                    </a>
+                                </div>
+                                <img src="img/podcast.png" alt="" class="projects__img">
+                            </figure>
+                            </div>
+                        <div class="projects__wrap">
+                      
+                        <h2 class="projects__title">Podcast app</h2>
+                        <p class="projects__description">Podcast app made with OOP. Allows the user to select randomly generated episodes to play. Made using html css javascript and JSON</p>
                         </div>
                     </li>
                 </ul>
@@ -218,8 +287,8 @@
                     <p class="contact__p">Let's connect on Linkedin</p>
                 </li>
                 <li class="contact__listitem"> <a href="mailto:nabilsalimi0229@gmail.com"><i
-                            class="fa-solid fa-envelope contact__icon contact__icon--third"></i></a>
-                    <p class="contact__p">email me at nabilsalimi0229@gmail.com</p>
+                            class="fa-brands fa-discord contact__icon contact__icon--third"></i></a>
+                    <p class="contact__p">You can also find me on Discord</p>
                 </li>
             </ul>
         </section>

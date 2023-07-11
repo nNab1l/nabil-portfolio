@@ -160,10 +160,40 @@
         align-items: center;
         border-top-right-radius: 2rem;
         border-bottom-right-radius: 2rem;
+        position: relative;
     }
 }
 
+.projects__iconwrapper{
+    position: absolute;
+    left: 85%;
+    color: black;
+    font-size: 2rem;
+    bottom: 80%;
+    background: white;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
 
+
+.projects__description{
+    color: #707070;
+    margin-top: 2rem;
+}
+
+
+.projects__contentWrapper{
+    display: flex;
+    justify-content: center;
+    color: #707070;
+    font-size: 4.5rem;
+    margin-top: 20rem;
+}
 
 
 
