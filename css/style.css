@@ -209,6 +209,7 @@ a {
   align-items: center;
   margin-left: 10rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 .projects__featuredCard {
   width: 80rem;
@@ -274,9 +275,9 @@ a {
   border-radius: 2rem;
   list-style: none;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: row-reverse;
 }
 .projects__wrap {
   height: 100%;
@@ -285,7 +286,7 @@ a {
   align-items: flex-start;
   flex-direction: column;
   padding-left: 10rem;
-  padding-top: 10rem;
+  padding-top: 5rem;
   position: relative;
 }
 .projects__title {
@@ -325,18 +326,6 @@ a {
   align-items: center;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
-}
-
-.projects__listitem {
-  display: none;
-}
-
-.projects__listitem.active {
-  display: flex; /* Change display to flex for active list item */
-}
-
-.projects__navitem.active {
-  background-color: #7984e7;
 }
 
 .info {
@@ -501,6 +490,7 @@ a {
   display: flex;
   justify-content: center;
   position: relative;
+  align-items: center;
 }
 
 .skills__text {
@@ -689,14 +679,17 @@ a {
   }
   .projects__content {
     width: 100%;
+    height: 100%;
   }
   .projects__list {
     width: 100%;
     padding: 2rem;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 19rem;
   }
   .projects__listitem {
     flex-wrap: wrap;
+    width: 100%;
     flex-direction: row;
   }
   .projects__img {
@@ -716,7 +709,7 @@ a {
   }
   .projects__nav {
     position: absolute;
-    left: 5%;
+    left: 40%;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -725,12 +718,12 @@ a {
   }
   .projects__navitem {
     height: 1rem;
-    width: 4rem;
+    width: rem;
     background: #dcdcdc;
     border-radius: 2rem;
   }
   .projects__wrap2 {
-    height: 20rem;
+    height: 30rem;
   }
   .projects__figure {
     width: 100%;
@@ -742,6 +735,36 @@ a {
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 0;
+  }
+  .skills__text {
+    width: 100%;
+    left: 0%;
+    padding: 5rem;
+  }
+  .skills__img {
+    object-fit: contain;
+    padding: 5rem;
+  }
+  .skills__mockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .skills__figwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .skills__circle {
+    width: 40rem;
+    height: 40rem;
+    background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
+    position: absolute;
+    left: 10%;
+    z-index: -99;
+    bottom: 20%;
+    border-radius: 50%;
   }
 }
 /*mediaqueries*/

@@ -222,24 +222,6 @@ function resizeRenderer() {
   
   window.addEventListener('resize', resizeRenderer);
   
-  const sliders = document.querySelectorAll(".projects__navitem");
-  const cards = document.querySelectorAll(".projects__listitem");
-  
-  cards[0].classList.add("active");
-  
-  sliders.forEach((slider, index) => {
-    slider.addEventListener("click", () => {
-      slider.classList.toggle("active");
-  
-      cards.forEach((card, cardIndex) => {
-        if (cardIndex === index) {
-          card.classList.add("active");
-        } else {
-          card.classList.remove("active");
-        }
-      });
-    });
-  });
   
 
   
