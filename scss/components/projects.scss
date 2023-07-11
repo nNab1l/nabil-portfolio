@@ -19,6 +19,7 @@
         justify-content: flex-start;
         align-items: center;
         margin-left: 10rem;
+        flex-wrap: wrap;
     }
 
     &__featuredCard{
@@ -98,6 +99,7 @@
         border-radius: 2rem;
         list-style: none;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -143,7 +145,7 @@
 
     &__img{
       width: 100%;
-      height: 90%;
+      height: 80%;
       border-radius: 2rem;
       padding: 4rem;
     }
@@ -163,9 +165,17 @@
 
 
 
-.active{
-    background: #7984e7;
-}
+
+.projects__listitem {
+    display: none;
+  }
+  
+  .projects__listitem.active {
+    display: flex; /* Change display to flex for active list item */
+  }
 
 
+  .projects__navitem.active {
+    background-color: #7984e7;
+  }
 
