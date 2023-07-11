@@ -158,10 +158,9 @@ torus2.position.y += -2;
 scene.add(torus, torus2)
 
 
-// Set the initial direction flag
 
 let isMovingUp = true;
-const maxHeight = 0.5; // Set the maximum height for the torus
+const maxHeight = 0.5; 
 
 function animate() {
   requestAnimationFrame(animate);
@@ -208,7 +207,7 @@ function resizeRenderer() {
     camera.bottom = -heightHalf;
   
     const torusScaleFactor = Math.min(width, height) / 350;
-    const torusPositionFactor = Math.min(width, height) / 20;
+    const torusPositionFactor = Math.min(width, height) / 24;
   
     torus.scale.set(torusScaleFactor, torusScaleFactor, torusScaleFactor);
     torus2.scale.set(torusScaleFactor, torusScaleFactor, torusScaleFactor);
@@ -223,3 +222,11 @@ function resizeRenderer() {
   
   window.addEventListener('resize', resizeRenderer);
   
+
+  const sliders = document.querySelectorAll(".projects__slider");
+
+  sliders.forEach(slider => {
+    slider.onclick = () => {
+      slider.classList.toggle('active');
+    };
+  });

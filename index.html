@@ -33,11 +33,6 @@
             <li class="nav__listitem"><a href="#contact" class="nav__link">Contact</a></li>
         </nav>
 
-        <!-- <figure class="circle circle--first"></figure>
-        <figure class="circle circle--second"></figure> -->
-        <figure></figure>
-        <figure></figure>
-
 
         <figure class="frontpage">
             <ul class="frontpage__sidenav">
@@ -69,45 +64,40 @@
             <div class="projects__div">
                 <h2 class="projects__heading">Projects<mark class="frontpage__mark">.</mark></h2>
             </div>
-            <ul class="projects__cards">
-
-                <li class="projects__card projects__card--first">
-                    <img class="projects__img" src="img/udemy.png" alt="Udemy clone frontpage">
-                    <p class="projects__p">Udemy Clone</p>
-                    <a href="https://github.com/nNab1l/Udemy-Eindopdracht"><i
-                            class="fa-brands fa-github projects__icon"></i></a>
-                </li>
-                <li class="projects__card projects__card">
-                    <img src="img/color.png" alt="colorpicker app">
-                    <p class="projects__p">Colorpicker App</p>
-                    <a href="https://github.com/nNab1l/M7PROG/tree/main/colorpicker"><i
-                            class="fa-brands fa-github projects__icon"></i></a>
-                </li>
-                <li class="projects__card projects__card">
-                    <img src="img/dark.png" alt="webshop ui with darkmode toggle option">
-                    <p class="projects__p">Webshop UI with darkmode</p>
-                    <a href="https://github.com/nNab1l/darkmode"><i class="fa-brands fa-github projects__icon"></i></a>
-                </li>
-                <li class="projects__card projects__card">
-                    <img src="img/tulp.png" alt="dutch travel agency site frontpage">
-                    <p class="projects__p">Travel agency site</p>
-                    <a href="https://github.com/nNab1l/tulpreizen"><i
-                            class="fa-brands fa-github projects__icon"></i></a>
-                </li>
-                <li class="projects__card projects__card">
-                    <img src="img/cart.png" alt="shopping cart system page">
-                    <p class="projects__p">shopping cart system</p>
-                    <a href="https://github.com/nNab1l/Shopping-cart"><i
-                            class="fa-brands fa-github projects__icon"></i></a>
-                </li>
-                <li class="projects__card projects__card">
-                    <img src="img/Schermafbeelding 2023-03-01 213903.png"
-                        alt="font generation app with darkmode toggle option">
-                    <p class="projects__p">Font generator app with darkmode</p>
-                    <a href="https://github.com/nNab1l/font-app"><i class="fa-brands fa-github projects__icon"></i></a>
-                </li>
-            </ul>
-        </section>
+            <article class="projects__featured">
+                <figure class="projects__featuredCard">
+                    <img src="img/ocr-preview.png" alt="" class="projects__mainimg">
+                </figure>
+                <div class="projects__wrapper">
+                    <h2 class="projects__h2">Image translation <br> app</h2>
+                    <p class="projects__p">An optical recognition App (OCR) capable of recognizing text in an image and
+                        translating it to the desired language. It uses the advanced Tesseract library for extracting
+                        the text from the image. Additionally it uses techniques like binarisation to further enhance
+                        it's accuracy. the app is still fully in development click to read more about what is coming in the future
+                    </p>
+                    <button class="projects__button">Read more</button>
+                </div>
+            </article>
+            <article class="projects__content">
+                <ul class="projects__list">
+                    <li class="projects__listitem">
+                        <div class="projects__wrap">
+                        <ul class="projects__nav">
+                            <li class="projects__navitem" id="slider"></li>
+                            <li class="projects__navitem" id="slider"></li>
+                            <li class="projects__navitem" id="slider"></li>
+                        </ul>
+                        <h2 class="projects__title">udemy</h2>
+                        <p>test</p>
+                        </div>
+                        <div class="projects__wrap2">
+                        <figure class="projects__figure">
+                            <img src="img/udemy.png" alt="" class="projects__img">
+                        </figure>
+                        </div>
+                    </li>
+                </ul>
+            </article>
         <section class="skills" id="skills">
             <div class="skills__wrapper">
                 <h2 class="skills__heading">My skills<mark class="frontpage__mark">.</mark></h2>
@@ -138,7 +128,8 @@
                     <figure class="skills__circle--second"></figure>
                     <i class="fa-brands fa-css3-alt skills__icon  skills__icon--fourth"></i>
                     <p class="skills__p">Familiar with the core <br>components, usage of rem for accesibility,
-                        <br>familiar with minifying for performance. </p>
+                        <br>familiar with minifying for performance.
+                    </p>
                 </li>
                 <li class="skills__listitem">
                     <figure class="skills__circle--first"></figure>
@@ -161,16 +152,20 @@
             <div class="skills__headerWrapper">
                 <h2 class="skills__resHeading">Responsive design<mark class="frontpage__mark">.</mark></h2>
             </div>
-           <article class="skills__responsive">
-            <p class="skills__text">Responsivity is one of my favorite parts during the development of a website as it
-                adds a new layer of creativity and flexibility. Switching things up to further enhance user friendliness
-                while still retaining the same aesthetic are my core principles of responsivity. In past projects i have
-                always made it my priority to make the most impactful changes in the most simple way as i am always
-                looking for ways to make the biggest concepts simple.</p>
-            <figure class="skills__mockup">
-                <img src="img/phone.webp" alt="" class="skills__img">
-            </figure>
+            <article class="skills__responsive">
+                <p class="skills__text">Responsivity is one of my favorite parts during the development of a website as
+                    it
+                    adds a new layer of creativity and flexibility. Switching things up to further enhance user
+                    friendliness
+                    while still retaining the same aesthetic are my core principles of responsivity. In past projects i
+                    have
+                    always made it my priority to make the most impactful changes in the most simple way as i am always
+                    looking for ways to make the biggest concepts simple.</p>
+                <figure class="skills__mockup">
+                    <img src="img/phone.webp" alt="" class="skills__img">
+                </figure>
             </article>
+            <figure class="skills__circle"></figure>
         </section>
         <section class="info" id="about">
             <div class="info__wrapper">
