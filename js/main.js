@@ -227,3 +227,24 @@ function resizeRenderer() {
   
 
   
+  const button = document.getElementById("js--menu");
+  const navigation = document.getElementById("js--nav");
+  
+  let isOpen = false;
+  navigation.style.display = "none";
+
+  
+  
+  button.onclick = function() {
+    if(isOpen){
+      navigation.style.display = "block";
+      isOpen = false;
+    }
+    else{
+      navigation.style.display = "none";
+      isOpen = true;
+    }
+  }
+  
+  
+  
