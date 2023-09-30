@@ -16,11 +16,11 @@
 
     &__featured{
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        margin-left: 10rem;
         flex-wrap: wrap;
         width: 100%;
+        height: 100%;
     }
 
     &__featuredCard{
@@ -164,6 +164,8 @@
     }
 }
 
+
+
 .projects__iconwrapper{
     position: absolute;
     left: 85%;
@@ -236,4 +238,245 @@
     color: #707070;
 }
 
+
+.projects__featurefig{
+    width: 100%;
+    height: 90vh;
+    background: white;
+    margin: 5rem;
+    box-shadow: 0 2rem 5rem 0 rgba(117, 117, 117, 0.2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.projects__slide{
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    padding-bottom: 3rem;
+    position: absolute;
+}
+
+.projects__slider{
+    width: 14rem;
+    height: 0.3rem;
+    background: #eee;
+    border-radius: 2rem;
+}
+
+.projects__fill {
+    width: 0%;
+    height: 100%;
+    background: #707070;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    border-radius: 2rem; /* Start with 0 width */
+    transform-origin: left center;
+}
+
+@keyframes fill {
+    0% {
+        width: 0%;;
+    }
+
+    100% {
+        width: 100%;;
+    }
+}
+
+.projects__featureimg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
   
+
+.projects__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 5rem;
+  }
+  .projects__one {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background: white;
+    border-radius: 1rem;
+    border: 2px #d4d4d4 solid;
+  }
+  .projects__two {
+    grid-column: 3 / 5;
+    grid-row: 1 / 4;
+    background: blue;
+    border-radius: 1rem;
+    background: white;
+    border: 2px #d4d4d4 solid;
+    position: relative;
+  }
+  .projects__three {
+    grid-column: 2 / 2;
+    grid-row: 1 / 4;
+    background: red;
+    border-radius: 1rem;
+    background: white;
+    border: 2px #d4d4d4 solid;
+    position: relative;
+  }
+  .projects__four {
+    grid-column: 4 / 5;
+    grid-row: 4 / 7;
+    border-radius: 1rem;
+    background: white;
+    border: 2px #d4d4d4 solid;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .img-2{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 2rem;
+  }
+
+  
+
+  .overlay{
+    width: 100%;
+    height: 12rem;
+    position: absolute;
+    background: white;
+    bottom: 0%;
+    border-top: 2px #d4d4d4 solid;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  
+  i{
+    color: #d4d4d4;
+  }
+
+  .bee__h2{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: #707070;
+    font-weight: 500;
+  }
+  .bee__p{
+    color: #707070;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    border-bottom: #7984e7 2px solid;
+  }
+
+ 
+ 
+
+  .img-3{
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    border-radius: 2rem;
+    position: relative;
+    top: 2.6%;
+    transform: scale(1.2);
+  }
+
+  
+  .img-6{
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    border-radius: 2rem;
+    position: relative;
+    top: 1.5%;
+  }
+
+  .projects__five {
+    grid-column: 2 / 4;
+    grid-row: 4 / 7;
+    border-radius: 1rem;
+    background: #C5E8C4;
+    position: relative;
+  }
+  .projects__six {
+    grid-column: 1 / 2;
+    grid-row: 4 / 7;
+    border-radius: 1rem;
+    background: white;
+    overflow: hidden;
+    background: #CCBBED;
+  }
+  
+  .img-4{
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+  }
+
+  img{
+    transition: 0.3s all;
+  }
+
+  .img-6:hover{
+    transform: scale(1.5);
+  }
+
+  @media (max-width: 768px) {
+    .projects__wrapper {
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+      padding: 2rem; 
+    }
+  
+    .projects__one,
+    .projects__two,
+    .projects__three,
+    .projects__four,
+    .projects__five,
+    .projects__six {
+      grid-column: auto;
+      grid-row: auto;
+      width: 100%; 
+      margin-bottom: 10px;
+      height: 32rem;
+    }
+
+    
+.projects__featurefig{
+  margin: 0rem;
+  box-shadow: none;
+  height: 50rem;
+}
+.projects__featureimg{
+  object-fit: contain;
+  transform: scale(1.4);
+  height: 100%;
+}
+
+video{
+  object-fit: contain;
+  height: 100%;
+  transform: scale(1.4);
+}
+
+.projects__slide{
+  width: 100%;
+  padding: 2rem;
+}
+  }

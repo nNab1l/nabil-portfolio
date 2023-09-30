@@ -247,4 +247,93 @@ function resizeRenderer() {
   }
   
   
-  
+document.addEventListener('DOMContentLoaded', function() {
+  const sidenav = document.getElementById("sidenav");
+  const featured = document.getElementById("featured");
+
+     function calculateOverlapPercentage(rect1, rect2) {
+        const overlapX = Math.max(0, Math.min(rect1.right, rect2.right) - Math.max(rect1.left, rect2.left));
+        const overlapY = Math.max(0, Math.min(rect1.bottom, rect2.bottom) - Math.max(rect1.top, rect2.top));
+
+        const areaOfRect1 = (rect1.right - rect1.left) * (rect1.bottom - rect1.top);
+
+        return (overlapX * overlapY) / areaOfRect1 * 100;
+    }
+
+  function checkOverlap(){
+    const rect1 = sidenav.getBoundingClientRect();
+    const rect2 = featured.getBoundingClientRect();
+
+    const overlapPercentage = calculateOverlapPercentage(rect1, rect2);
+
+    if (overlapPercentage >= 50) {
+        sidenav.classList.add('touched');
+    } else {
+        sidenav.classList.remove('touched');
+    }
+  };
+  checkOverlap();
+  window.addEventListener('scroll', checkOverlap);
+});
+
+
+document.addEventListener("DOMContentLoaded", async function () {
+  const sliders = document.querySelectorAll(".projects__fill");
+  const image = document.getElementById("image");
+  const video = document.getElementById("video");
+
+  const images = ["ocr-preview.png", "/img/ocr.png", "", "img/lang2.png"];
+  let currentIndex = 0;
+
+  function updateSlider(index) {
+      const currentSlider = sliders[index];
+      currentSlider.style.width = "0%";
+      currentSlider.style.animation = "fill 6s linear forwards";
+
+      return new Promise((resolve) => {
+          setTimeout(() => {
+              currentSlider.style.animation = "";
+              resolve();
+          }, 6000);
+      });
+  }
+
+  while (true) {
+      await updateSlider(currentIndex);
+      currentIndex++;
+      if (currentIndex >= sliders.length) {
+          currentIndex = 0;
+      }
+
+      if (currentIndex === 0) {
+          video.style.display = "block";
+          image.style.display = "none";
+      } else {
+          video.style.display = "none";
+          image.style.display = "block";
+          image.src = images[currentIndex];
+      }
+  }
+});
+
+if (typeof toggleSidebar !== 'function') {
+  function toggleSidebar() {
+      const pnElement = document.querySelector('.pn');
+      const ulElement = document.getElementById('sidenav');
+
+      let isOpen = false;
+
+      pnElement.addEventListener('click', function () {
+          if (isOpen) {
+              ulElement.style.marginLeft = '3rem';
+              pnElement.textContent = '<';
+          } else {
+              ulElement.style.marginLeft = '-6.2rem';
+              pnElement.textContent = '>';
+          }
+          isOpen = !isOpen;
+      });
+  }
+
+  toggleSidebar();
+}

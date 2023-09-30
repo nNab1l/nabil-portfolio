@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Nabil's Portfolio">
     <meta name="keywords" content="github, nabil, portfolio">
+    <link rel="icon" type="image/x-icon" href="img/favicon-new.png">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.js"></script>
     <script type="module" src="js/main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Ubuntu&display=swap"
+        rel="stylesheet">
 </head>
 <canvas id="bg"></canvas>
 
@@ -50,7 +55,7 @@
 
 
         <figure class="frontpage">
-            <ul class="frontpage__sidenav">
+            <ul id="sidenav" class="frontpage__sidenav">
                 <li class="frontpage__listitem"> <a href="https://github.com/nNab1l"><i
                             class="fa-brands fa-github frontpage__sidenavicon"></i></a></li>
                 <li class="frontpage__listitem"> <a href="https://www.linkedin.com/in/nabil-salimi-5a5616267/"><i
@@ -59,6 +64,9 @@
                             class="fa-solid fa-envelope frontpage__sidenavicon"></a></i></li>
                 <li class="frontpage__listitem"> <a href="https://discordapp.com/users/626027716474306561"><i
                     class="fa-brands fa-discord frontpage__sidenavicon"></a></i></li>
+                <li class="frontpage__listitem frontpage__listitem--five">
+                    <p class="pn"><</p>
+                </li>
                 </div>
             </ul>
             <h1 class="frontpage__h1" id="js--front">
@@ -80,128 +88,59 @@
             <div class="projects__div">
                 <h2 class="projects__heading">Featured Project<mark class="frontpage__mark">.</mark></h2>
             </div>
-            <article class="projects__featured">
-                <figure class="projects__featuredCard">
-                    <img src="img/ocr-preview.png" alt="" class="projects__mainimg">
+            <article id="featured" class="projects__featured">
+                <figure class="projects__featurefig">
+                    <img id="image" src="" alt="" class="projects__featureimg">
+                    <video id="video" src="img/beta.mp4" muted autoplay loop></video>
+                    <ul class="projects__slide">
+                        <li class="projects__slider">
+                            <div class="projects__fill" id="slider1"></div>
+                        </li>
+                        <li class="projects__slider">
+                            <div class="projects__fill" id="slider2"></div>
+                        </li>
+                        <li class="projects__slider">
+                            <div class="projects__fill" id="slider3"></div>
+                        </li>
+                        <li class="projects__slider">
+                            <div class="projects__fill" id="slider4"></div>
+                        </li>
+                    </ul>
                 </figure>
-                <div class="projects__wrapper">
-                    <h2 class="projects__h2">Image translation <br> app</h2>
-                    <p class="projects__p">An optical recognition App (OCR) capable of recognizing text in an image and
-                        translating it to the desired language. It uses the advanced Tesseract library for extracting
-                        the text from the image. Additionally it uses techniques like binarisation to further enhance
-                        it's accuracy. the app is still fully in development and is getting much more functionalities.
-                    </p>
-                    <!-- <button class="projects__button">Read more</button> -->
-                </div>
             </article>
             <div class="projects__contentWrapper">
                 <h2 class="projects__contentTitle">Projects<mark class="frontpage__mark">.</mark></h2>
             </div>
-            <article class="projects__content">
-                <ul class="projects__list">
-                    <li class="projects__listitem" data-target="slider1">
-                        <div class="projects__wrap2">
-                        <figure class="projects__figure">
-                            <div class="projects__iconwrapper">
-                                <a href="https://github.com/nNab1l/Udemy-Eindopdracht">
-                                    <i class="fa-brands fa-github projects__icon"></i>
-                                </a>
-                            </div>
-                            <img src="img/udemy.png" alt="" class="projects__img">
-                        </figure>
-                        </div>
-                        <div class="projects__wrap">
-                      
-                        <h2 class="projects__title">udemy clone</h2>
-                        <p class="projects__description">A clone of the udemy homepage made with html and scss.</p>
-                        </div>
-                    </li>
-                    <li class="projects__listitem" data-target="slider2">
-                        <div class="projects__wrap2">
-                            <figure class="projects__figure">
-                                <div class="projects__iconwrapper">
-                                    <a href="https://github.com/nNab1l/darkmode">
-                                        <i class="fa-brands fa-github projects__icon"></i>
-                                    </a>
-                                </div>
-                                <img src="img/dark.png" alt="" class="projects__img">
-                            </figure>
-                        </div>
-                        <div class="projects__wrap">
-                        <h2 class="projects__title">Shopping cart interface <br> with darkmode</h2>
-                        <p class="projects__description">simple interface for a shopping cart system made with html css and javascript</p>
-                        </div>
-                    </li>
-                    <li class="projects__listitem" data-target="slider3">
-                        <div class="projects__wrap2">
-                            <figure class="projects__figure">
-                                <div class="projects__iconwrapper">
-                                    <a href="https://github.com/nNab1l/tulpreizen">
-                                        <i class="fa-brands fa-github projects__icon"></i>
-                                    </a>
-                                </div>
-                                <img src="img/tulp.png" alt="" class="projects__img">
-                            </figure>
-                            </div>
-                        <div class="projects__wrap">
-                      
-                        <h2 class="projects__title">Travel agency landing <br> page</h2>
-                        <p class="projects__description">landing page made with html and scss. </p>
-                        </div>
-                    </li>
-                    <li class="projects__listitem" data-target="slider3">
-                        <div class="projects__wrap2">
-                            <figure class="projects__figure">
-                                <div class="projects__iconwrapper">
-                                    <a href="https://github.com/nNab1l/M7PROG/tree/main/colorpicker">
-                                        <i class="fa-brands fa-github projects__icon"></i>
-                                    </a>
-                                </div>
-                                <img src="img/color.png" alt="" class="projects__img">
-                            </figure>
-                            </div>
-                        <div class="projects__wrap">
-                      
-                        <h2 class="projects__title">Colorpicker app</h2>
-                        <p class="projects__description">a generative color picker app that allows the user to copy the color's code when it is clicked. Made with html css and javascript</p>
-                        </div>
-                    </li>
-                    <li class="projects__listitem" data-target="slider3">
-                        <div class="projects__wrap2">
-                            <figure class="projects__figure">
-                                <div class="projects__iconwrapper">
-                                    <a href="https://github.com/nNab1l/Shopping-cart">
-                                        <i class="fa-brands fa-github projects__icon"></i>
-                                    </a>
-                                </div>
-                                <img src="img/cart.png" alt="" class="projects__img">
-                            </figure>
-                            </div>
-                        <div class="projects__wrap">
-                      
-                        <h2 class="projects__title">Shopping cart system</h2>
-                        <p class="projects__description">simple shopping cart system that makes use of modals. Made with html css and javascript</p>
-                        </div>
-                    </li>
-                    <li class="projects__listitem" data-target="slider3">
-                        <div class="projects__wrap2">
-                            <figure class="projects__figure">
-                                <div class="projects__iconwrapper">
-                                    <a href="https://github.com/nNab1l/Collection-of-Happiness">
-                                        <i class="fa-brands fa-github projects__icon"></i>
-                                    </a>
-                                </div>
-                                <img src="img/podcast.png" alt="" class="projects__img">
-                            </figure>
-                            </div>
-                        <div class="projects__wrap">
-                      
-                        <h2 class="projects__title">Podcast app</h2>
-                        <p class="projects__description">Podcast app made with OOP. Allows the user to select randomly generated episodes to play. Made using html css javascript and JSON</p>
-                        </div>
-                    </li>
-                </ul>
-            </article>
+            <div class="projects__wrapper">
+                <article class="projects__one">
+                    <img class="img-2" src="img/Schermafbeelding 2023-03-01 213903.png" alt="">
+                </article>
+                <article class="projects__two">
+                    <img src="img/udemy.png" alt="" class="img-2">
+                    <!-- <div class="overlay"></div> -->
+                </article>
+                <article class="projects__three">
+                    <img class="img-4" src="img/translate-language-5590462-4652683.png" alt="">
+                    <h2 class="bee__h2">Multilingual object<br>detection
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </h2>
+                        <p class="bee__p">AI/ML</p>
+                </article>
+                <article class="projects__four">
+                    <img class="img-4" src="img/newbee.png" alt="">
+                    <h2 class="bee__h2">Bee Detection with<br> custom Dataset
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </h2>
+                        <p class="bee__p">AI/ML</p>
+                </article>
+                <article class="projects__five">
+                    <img src="img/landing.png" alt="" class="img-3">
+                </article>
+                <article class="projects__six">
+                    <img src="img/2m.png" alt="" class="img-6">
+                </article>
+              </div>
+              
         <section class="skills" id="skills">
             <div class="skills__wrapper">
                 <h2 class="skills__heading">My skills<mark class="frontpage__mark">.</mark></h2>
@@ -288,7 +227,7 @@
             </div>
         </section>
         <section class="contact" id="contact">
-            <figure class="contact__circle contact__circle--first"></figure>
+            <article class="contact__container">
             <h2 class="contact__heading">Let's link up!
                 <i class="fa-solid fa-link"></i>
             </h2>
@@ -307,6 +246,7 @@
                     <p class="contact__p">You can also find me on Discord</p>
                 </li>
             </ul>
+            </article>
         </section>
     </main>
 </body>

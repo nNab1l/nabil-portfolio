@@ -19,7 +19,6 @@
 
     &__listitem{
         width: 40rem;
-        box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.2);
         height: 40rem;
         display: flex;
         justify-content: center;
@@ -53,8 +52,6 @@
     }
 
     &__listitem:hover{
-        transform: perspective(3000px) rotatex(10deg);
-      
     }
 
     &__listitem::before{
@@ -192,3 +189,107 @@
 
 
 
+
+.skills__listitem:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  }
+  
+  .skills__listitem:hover::before, .skills__listitem:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 42rem;
+    height: 42rem;
+    background: #CCBBED;
+    border-radius: 2rem;
+    z-index: -10;
+    animation: 4s clockwise infinite;
+    border-radius: 50%;
+    transition: 0.2s all;
+  }
+  
+  .skills__listitem:hover:after {
+    background: #7984e7;
+    opacity: 0.5;
+    animation: 2s counterclockwise infinite;
+    transition: 0.2s all;
+
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
