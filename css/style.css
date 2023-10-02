@@ -1053,8 +1053,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100rem;
-  height: 70rem;
+  width: 100%;
+  height: 100%;
   border-radius: 2.5rem;
 }
 .contact__heading {
@@ -1063,18 +1063,33 @@ img {
 }
 .contact__links {
   display: flex;
-  gap: 15rem;
+  gap: 2rem;
   margin-top: 5rem;
   list-style: none;
   justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 4rem;
+  width: 100%;
 }
 .contact__listitem {
-  font-size: 4.5rem;
+  font-size: 7rem;
+  width: 40rem;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background: red;
+  border-radius: 2rem;
+}
+.contact__listitem--first {
+  background: rgb(59, 59, 59);
+}
+.contact__listitem--second {
+  background: rgb(56, 151, 252);
+}
+.contact__listitem--third {
+  background: #7984e7;
 }
 .contact__p {
   font-size: 1.5rem;
@@ -1084,17 +1099,14 @@ img {
 .contact__paragraph {
   color: #707070;
 }
-.contact__icon--first:hover {
-  color: black;
-  transition: 0.5s;
+.contact__icon--first {
+  color: white;
 }
-.contact__icon--second:hover {
-  color: rgb(0, 123, 255);
-  transition: 0.5s;
+.contact__icon--second {
+  color: white;
 }
-.contact__icon--third:hover {
-  color: #7984e7;
-  transition: 0.5s;
+.contact__icon--third {
+  color: white;
 }
 .darkModeText {
   color: white;
@@ -1119,11 +1131,11 @@ img {
   }
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Change to a single column for mobile */
+    grid-template-columns: repeat(1, 1fr);
     gap: 10px;
     padding: 5rem;
-    max-width: 800px; /* Set your desired maximum width */
-    margin: 0 auto; /* Center the grid horizontally */
+    max-width: 800px;
+    margin: 0 auto;
   }
   .frontpage__sidenav {
     position: fixed;
@@ -1269,15 +1281,15 @@ img {
     flex-wrap: nowrap;
     justify-content: flex-start;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory; /* Enable horizontal scrolling snap points */
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
   }
   .skills__listitem {
-    flex: 0 0 auto; /* Allow items to expand to fit content */
-    min-width: 100%; /* Each item takes up at least the full viewport width */
-    scroll-snap-align: start; /* Snap each item to the start of the scroll container */
-    padding: 10px; /* Add some padding for spacing between items */
-    box-sizing: border-box; /* Include padding in the item's width */
-    /* Optionally, you can add other styles as needed */
+    flex: 0 0 auto;
+    max-width: 100%;
+    scroll-snap-align: start;
+    padding: 10px;
+    box-sizing: border-box;
   }
   .skills__text {
     width: 100%;

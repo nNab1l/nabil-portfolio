@@ -209,11 +209,12 @@
         justify-content: flex-start;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory; 
+        overflow-y: hidden;
       }
       
       .skills__listitem {
         flex: 0 0 auto;
-        min-width: 100%;
+        max-width: 100%;
         scroll-snap-align: start; 
         padding: 10px; 
         box-sizing: border-box;
