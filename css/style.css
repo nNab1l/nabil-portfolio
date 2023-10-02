@@ -104,6 +104,7 @@ header {
   z-index: 2;
   transition: 0.3s all;
   transition: margin-left 0.5s ease;
+  z-index: 20;
 }
 .frontpage__h1 {
   position: absolute;
@@ -543,6 +544,7 @@ video {
   background: white;
   border-radius: 1rem;
   border: 2px #d4d4d4 solid;
+  overflow: hidden;
 }
 
 .projects__two {
@@ -586,15 +588,23 @@ video {
   width: 100%;
   height: 12rem;
   position: absolute;
-  background: white;
+  background: #CCBBED;
   bottom: 0%;
-  border-top: 2px #d4d4d4 solid;
+  border-top: 2px #a897ca solid;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  opacity: 0.95;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-i {
-  color: #d4d4d4;
+.projects__overlayText {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  color: white;
+  font-weight: 500;
 }
 
 .bee__h2 {
@@ -620,7 +630,7 @@ i {
   object-fit: contain;
   border-radius: 2rem;
   position: relative;
-  top: 2.6%;
+  top: 2.5%;
   transform: scale(1.2);
 }
 
@@ -648,6 +658,7 @@ i {
   background: white;
   overflow: hidden;
   background: #CCBBED;
+  position: relative;
 }
 
 .img-4 {
@@ -683,6 +694,11 @@ img {
     width: 100%;
     margin-bottom: 10px;
     height: 32rem;
+  }
+  .img-3 {
+    transform: scale(1);
+    height: 100%;
+    width: 100%;
   }
   .projects__featurefig {
     margin: 0rem;
@@ -766,7 +782,7 @@ img {
 .skills {
   margin-top: 30rem;
   margin-bottom: 20rem;
-  padding: 5rem;
+  padding: 2rem;
 }
 .skills__icon {
   color: white;
@@ -847,15 +863,15 @@ img {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
 }
 
 .skills__mockup {
-  width: 90rem;
-  height: 90rem;
+  width: 70rem;
+  height: 70rem;
 }
 
 .skills__headerWrapper {
@@ -1128,6 +1144,9 @@ img {
     margin-top: 0;
     width: 5rem;
   }
+  .frontpage__listitem--five {
+    display: none;
+  }
   .nav {
     margin-right: 1rem;
     max-width: 100%;
@@ -1242,6 +1261,24 @@ img {
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 0;
   }
+  .skills__list {
+    display: flex;
+    overflow-x: auto;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; /* Enable horizontal scrolling snap points */
+  }
+  .skills__listitem {
+    flex: 0 0 auto; /* Allow items to expand to fit content */
+    min-width: 100%; /* Each item takes up at least the full viewport width */
+    scroll-snap-align: start; /* Snap each item to the start of the scroll container */
+    padding: 10px; /* Add some padding for spacing between items */
+    box-sizing: border-box; /* Include padding in the item's width */
+    /* Optionally, you can add other styles as needed */
+  }
   .skills__text {
     width: 100%;
     left: 0%;
@@ -1249,8 +1286,9 @@ img {
   }
   .skills__img {
     object-fit: contain;
-    width: 90rem;
-    height: 90rem;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.5);
   }
   .skills__responsivity {
     display: flex;
@@ -1263,6 +1301,7 @@ img {
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
   }
   .skills__figwrapper {
     width: 100%;

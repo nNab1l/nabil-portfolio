@@ -313,6 +313,7 @@ video{
     background: white;
     border-radius: 1rem;
     border: 2px #d4d4d4 solid;
+    overflow: hidden;
   }
   .projects__two {
     grid-column: 3 / 5;
@@ -355,16 +356,26 @@ video{
     width: 100%;
     height: 12rem;
     position: absolute;
-    background: white;
+    background: #CCBBED;
     bottom: 0%;
-    border-top: 2px #d4d4d4 solid;
+    border-top: 2px #a897ca solid;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    opacity: 0.95;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
-  
-  i{
-    color: #d4d4d4;
+
+
+  .projects__overlayText{
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+    color: white;
+    font-weight: 500;
   }
+ 
 
   .bee__h2{
     position: absolute;
@@ -373,6 +384,7 @@ video{
     color: #707070;
     font-weight: 500;
   }
+
   .bee__p{
     color: #707070;
     font-size: 1.8rem;
@@ -391,7 +403,7 @@ video{
     object-fit: contain;
     border-radius: 2rem;
     position: relative;
-    top: 2.6%;
+    top: 2.5%;
     transform: scale(1.2);
   }
 
@@ -419,8 +431,10 @@ video{
     background: white;
     overflow: hidden;
     background: #CCBBED;
+    position: relative;
   }
-  
+
+
   .img-4{
     width: 15rem;
     height: 15rem;
@@ -432,6 +446,9 @@ video{
   img{
     transition: 0.3s all;
   }
+
+
+  
 
   .img-6:hover{
     transform: scale(1.5);
@@ -457,6 +474,11 @@ video{
       height: 32rem;
     }
 
+  .img-3{
+    transform: scale(1);
+    height: 100%;
+    width: 100%;
+  }
     
 .projects__featurefig{
   margin: 0rem;

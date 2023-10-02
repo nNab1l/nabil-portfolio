@@ -337,3 +337,26 @@ if (typeof toggleSidebar !== 'function') {
 
   toggleSidebar();
 }
+
+const img6Elements = document.querySelectorAll('.img-6');
+
+img6Elements.forEach((element) => {
+    const overlay = document.querySelector('.overlay');
+
+    element.addEventListener('mouseover', () => {
+        overlay.style.display = 'block';
+        setTimeout(() => {
+            overlay.style.opacity = '0.9';
+        }, 10); 
+    });
+
+    element.addEventListener('mouseout', () => {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 300); 
+    });
+});
+
+
+
