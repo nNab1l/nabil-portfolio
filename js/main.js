@@ -338,25 +338,55 @@ if (typeof toggleSidebar !== 'function') {
   toggleSidebar();
 }
 
-const img6Elements = document.querySelectorAll('.img-6');
 
-img6Elements.forEach((element) => {
-    const overlay = document.querySelector('.overlay');
-
-    element.addEventListener('mouseover', () => {
-        overlay.style.display = 'block';
-        setTimeout(() => {
-            overlay.style.opacity = '0.9';
-        }, 10); 
+document.addEventListener('DOMContentLoaded', function () {
+  const articles = document.querySelectorAll('[data-article]');
+  articles.forEach(article => {
+    const modalId = article.getAttribute('data-modal');
+    article.addEventListener('click', () => {
+      const modal = document.getElementById(modalId);
+      modal.style.display = 'block';
+      document.documentElement.style.overflow = 'hidden';
     });
+  });
 
-    element.addEventListener('mouseout', () => {
-        overlay.style.opacity = '0';
-        setTimeout(() => {
-            overlay.style.display = 'none';
-        }, 300); 
+  // Close modal when clicking outside of it
+  const modals = document.querySelectorAll('.projects__modal');
+  const closeButtons = document.querySelectorAll('.projects__modal--arrow');
+  modals.forEach(modal => {
+    closeButtons.forEach(closeButton => {
+      closeButton.addEventListener('click', (event) => {
+        modal.style.display = 'none';
+        document.documentElement.style.overflow = 'auto';
+        document.documentElement.style.overflowX = 'hidden';
+      });
     });
+  });
 });
 
 
 
+var wrappers = document.querySelectorAll(".projects__wrapper2");
+
+wrappers.forEach(function(wrapper) {
+  var wrapping = wrapper.querySelector(".projects__wrapping");
+  var plus = wrapping.querySelector(".projects__plus");
+  var panel = wrapper.querySelector(".projects__panel");
+  var isClicked = false;
+
+  wrapping.addEventListener("click", function() {
+    panel.classList.toggle("active");
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+
+    if (isClicked) {
+      plus.textContent = "+"; // Change to plus sign
+    } else {
+      plus.textContent = "-"; // Change to minus sign
+    }
+    isClicked = !isClicked; // Toggle the isClicked flag
+  });
+});

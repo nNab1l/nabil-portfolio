@@ -475,13 +475,15 @@ span {
 
 .projects__featurefig {
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   background: white;
   margin: 5rem;
   box-shadow: 0 2rem 5rem 0 rgba(117, 117, 117, 0.2);
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  transition: 0.5s all;
+  border-radius: 2rem;
 }
 
 .projects__slide {
@@ -522,12 +524,14 @@ span {
   height: 100%;
   object-fit: cover;
   display: none;
+  border-radius: 2rem;
 }
 
 video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 2rem;
 }
 
 .projects__wrapper {
@@ -555,6 +559,7 @@ video {
   background: white;
   border: 2px #d4d4d4 solid;
   position: relative;
+  overflow: hidden;
 }
 
 .projects__three {
@@ -565,6 +570,7 @@ video {
   background: white;
   border: 2px #d4d4d4 solid;
   position: relative;
+  overflow: hidden;
 }
 
 .projects__four {
@@ -577,42 +583,265 @@ video {
   position: relative;
 }
 
-.img-2 {
+.projects__img-2 {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  position: relative;
+}
+.projects__accordion {
+  cursor: pointer;
+  color: #707070;
+  margin-top: 5rem;
+  padding: 0rem;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.projects__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.projects__bullet {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 4rem;
+  list-style: circle;
+}
+
+.projects__bulletlist > i {
+  color: #7984e7;
+}
+
+.projects__bulletlist {
+  color: #707070;
+}
+
+.projects__wrapping {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  border-bottom: #7984e7 3px solid;
+  align-items: flex-end;
+}
+
+.projects__wrapping:hover {
+  cursor: pointer;
+}
+
+.projects__plus {
+  font-size: 3rem;
+  color: #707070;
+}
+
+.projects__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%; /* Set the height to 25% */
+  backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+  z-index: 1;
+  color: white;
+  padding-left: 2rem;
+  opacity: 0; /* Start with 0 opacity (completely transparent) */
+  visibility: hidden; /* Start with hidden */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.projects__overlay--second {
+  background: rgba(110, 110, 110, 0.026);
+  border-top: #b0b0b0 1px solid;
+}
+.projects__overlay--fourth {
+  background: none;
+  visibility: visible;
+  opacity: 1;
+}
+.projects__overlay--fifth {
+  border-top: rgba(138, 189, 137, 0.6117647059) 1px solid;
+  background-color: rgba(140, 185, 138, 0.4470588235);
+}
+.projects__overlay--sixth {
+  border-top: #ab96d6 1px solid;
+  background-color: rgba(179, 147, 243, 0.4784313725);
+}
+
+article:hover .projects__overlay {
+  opacity: 1; /* Fade in by setting opacity to 1 */
+  visibility: visible;
+}
+
+.projects__four:hover .projects__img-4 {
+  padding: 1rem;
+}
+
+.projects__three:hover .projects__img-4 {
+  padding: 1rem;
+}
+
+.projects__modal {
+  background: white;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 19;
+  overflow-y: auto;
+  opacity: 1;
+  transition: 0.5s all;
+}
+
+.projects__modal-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 19;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.projects__modalart {
+  height: 200vh;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+  gap: 5rem;
+}
+
+.projects__modalfig {
+  width: 80%;
+  height: 40rem;
+  background: #f1f1f1;
   border-radius: 2rem;
 }
-
-.overlay {
-  width: 100%;
-  height: 12rem;
-  position: absolute;
-  background: #CCBBED;
-  bottom: 0%;
-  border-top: 2px #a897ca solid;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  opacity: 0.95;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.projects__modalfig--cover {
+  height: 55rem;
 }
 
-.projects__overlayText {
-  position: absolute;
-  bottom: 25%;
-  left: 5%;
+.projects__modalimg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.3s all;
+  border-radius: 2rem;
+}
+.projects__modalimg:hover {
+  transform: scale(0.9);
+}
+.projects__modalimg--cover {
+  object-fit: cover;
+}
+.projects__modalimg--cover:hover {
+  transform: scale(1);
+}
+
+.projects__modalh3 {
+  padding-top: 12rem;
+  font-size: 3rem;
+  color: #707070;
+}
+
+.projects__modalp {
+  color: #707070;
+  padding-top: 2rem;
+}
+
+.projects__modalh2 {
+  color: #707070;
+  font-size: 5.5rem;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.projects__modal--arrow {
+  color: #707070;
+  font-size: 3rem;
+  justify-self: flex-start;
+  align-self: center;
+}
+
+.projects__modalhead {
+  height: auto;
+  gap: 5rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.projects__modaltags {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  list-style: none;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.projects__modaltag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  background: white;
+  font-size: 1.5rem;
+  border: solid #707070 2px;
+  border-radius: 2rem;
+  color: #707070;
+  padding: 2rem;
+}
+
+.projects__modalwrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.projects__tags {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.projects__tag {
+  background-color: white;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border: 1px white solid;
   color: white;
-  font-weight: 500;
+  color: #707070;
+  height: 2.3rem;
+  width: 8rem;
+  border-radius: 15px;
 }
 
 .bee__h2 {
   position: absolute;
-  bottom: 5%;
+  top: 10%;
   left: 5%;
-  color: #707070;
+  color: white;
   font-weight: 500;
+}
+.bee__h2--alt {
+  color: #707070;
 }
 
 .bee__p {
@@ -624,7 +853,7 @@ video {
   border-bottom: #7984e7 2px solid;
 }
 
-.img-3 {
+.projects__img-3 {
   width: 100%;
   height: 320px;
   object-fit: contain;
@@ -633,8 +862,11 @@ video {
   top: 2.5%;
   transform: scale(1.2);
 }
+.projects__img-3:hover {
+  transform: scale(1.4);
+}
 
-.img-6 {
+.projects__img-6 {
   width: 100%;
   height: 320px;
   object-fit: contain;
@@ -649,6 +881,7 @@ video {
   border-radius: 1rem;
   background: #C5E8C4;
   position: relative;
+  overflow: hidden;
 }
 
 .projects__six {
@@ -661,7 +894,7 @@ video {
   position: relative;
 }
 
-.img-4 {
+.projects__img-4 {
   width: 15rem;
   height: 15rem;
   position: absolute;
@@ -673,7 +906,7 @@ img {
   transition: 0.3s all;
 }
 
-.img-6:hover {
+.projects__img-6:hover {
   transform: scale(1.5);
 }
 
@@ -695,7 +928,7 @@ img {
     margin-bottom: 10px;
     height: 32rem;
   }
-  .img-3 {
+  .projects__img-3 {
     transform: scale(1);
     height: 100%;
     width: 100%;
@@ -704,6 +937,9 @@ img {
     margin: 0rem;
     box-shadow: none;
     height: 50rem;
+  }
+  .projects__wrapper2 {
+    margin-bottom: 10rem;
   }
   .projects__featureimg {
     object-fit: contain;
@@ -806,7 +1042,7 @@ img {
   position: relative;
   border-radius: 1.5rem;
   transform: perspective(1500px);
-  transition: 0.2s all;
+  transition: 0.5s all;
 }
 .skills__circle {
   width: 50rem;
@@ -822,6 +1058,9 @@ img {
   height: 100%;
   width: 100%;
   position: relative;
+}
+.skills__listitem:hover {
+  border-radius: 50rem;
 }
 .skills__listitem::before {
   background: radial-gradient(80rem circle at var(--mouse-x) var(--mouse-y), rgba(204, 187, 237, 0.5803921569), transparent 40%);
@@ -1081,18 +1320,31 @@ img {
   justify-content: center;
   background: red;
   border-radius: 2rem;
+  transition: 0.5s all;
 }
 .contact__listitem--first {
   background: rgb(59, 59, 59);
 }
+.contact__listitem--first:hover {
+  background: rgb(28, 28, 28);
+}
 .contact__listitem--second {
   background: rgb(56, 151, 252);
+}
+.contact__listitem--second:hover {
+  background: rgb(48, 132, 221);
 }
 .contact__listitem--third {
   background: #7984e7;
 }
+.contact__listitem--third:hover {
+  background: #6771c6;
+}
 .contact__listitem--fourth {
   background: rgb(251, 51, 51);
+}
+.contact__listitem--fourth:hover {
+  background: rgb(212, 45, 45);
 }
 .contact__p {
   font-size: 1.5rem;
@@ -1101,6 +1353,12 @@ img {
 }
 .contact__paragraph {
   color: #707070;
+}
+.contact__icon {
+  transition: 1s all;
+}
+.contact__icon:hover {
+  rotate: 360deg;
 }
 .contact__icon--first {
   color: white;
@@ -1129,6 +1387,9 @@ img {
   }
 }
 @media screen and (max-width: 62.5rem) {
+  .contact__links {
+    padding: 1rem;
+  }
   .info {
     padding: 5rem;
   }

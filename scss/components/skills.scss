@@ -29,7 +29,7 @@
         position: relative;
         border-radius: 1.5rem;
         transform: perspective(1500px);
-        transition: 0.2s all;
+        transition: 0.5s all;
     }
 
     &__circle{
@@ -52,6 +52,7 @@
     }
 
     &__listitem:hover{
+      border-radius: 50rem;
     }
 
     &__listitem::before{

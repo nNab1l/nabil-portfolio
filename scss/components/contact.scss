@@ -43,21 +43,37 @@
         justify-content: center;
         background: red;
         border-radius: 2rem;
+        transition: 0.5s all;
+
 
 
         &--first{
             background: rgb(59, 59, 59);
+
+            &:hover{
+                background: rgb(28, 28, 28);
+            }
         }
 
         &--second{
             background: rgb(56, 151, 252);
+
+            &:hover{
+                background: rgb(48, 132, 221);
+            }
         }
 
         &--third{
             background: #7984e7;
+            &:hover{
+                background: #6771c6;
+            }
         }
 
         &--fourth{
+            &:hover{
+                background: rgb(212, 45, 45);
+            }
             background: rgb(251, 51, 51);
         }
     }
@@ -72,7 +88,14 @@
         color: colors.$font-color;
     }
 
+    &__icon{
+        transition: 1s all;
+    }
+
     
+    &__icon:hover{
+        rotate: 360deg;
+    }
 
 
     &__icon--first{
