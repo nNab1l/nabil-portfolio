@@ -4,13 +4,12 @@
         overflow-x: hidden;
     }
 
- 
-
-
-
-    .circle--fifth{
-        display: none;
-    }
+    
+    .projects__wrapper {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem; 
+      }
 
 
 }
@@ -38,6 +37,7 @@
         max-width: 800px;
         margin: 0 auto; 
       }
+
 
     .frontpage__sidenav {
         position: fixed;

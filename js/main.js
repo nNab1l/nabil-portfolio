@@ -350,7 +350,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Close modal when clicking outside of it
   const modals = document.querySelectorAll('.projects__modal');
   const closeButtons = document.querySelectorAll('.projects__modal--arrow');
   modals.forEach(modal => {
@@ -383,10 +382,10 @@ wrappers.forEach(function(wrapper) {
     }
 
     if (isClicked) {
-      plus.textContent = "+"; // Change to plus sign
+      plus.textContent = "+";
     } else {
-      plus.textContent = "-"; // Change to minus sign
+      plus.textContent = "-";
     }
-    isClicked = !isClicked; // Toggle the isClicked flag
+    isClicked = !isClicked; 
   });
 });
