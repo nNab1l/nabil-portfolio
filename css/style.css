@@ -602,6 +602,7 @@ video {
 }
 
 .projects__panel {
+  margin-bottom: 5rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -629,6 +630,7 @@ video {
   width: 60%;
   border-bottom: #7984e7 3px solid;
   align-items: flex-end;
+  margin-bottom: 2rem;
 }
 
 .projects__wrapping:hover {
@@ -714,7 +716,7 @@ article:hover .projects__overlay {
 }
 
 .projects__modalart {
-  height: 200vh;
+  height: 100%;
   width: 100%;
   background: white;
   display: flex;
@@ -964,9 +966,6 @@ img {
     margin: 0rem;
     box-shadow: none;
     height: 50rem;
-  }
-  .projects__wrapper2 {
-    margin-bottom: 10rem;
   }
   .projects__featureimg {
     object-fit: contain;
@@ -1414,6 +1413,11 @@ img {
     grid-template-columns: repeat(1, 1fr);
     padding: 2rem;
   }
+  .projects__featurefig {
+    margin: 0rem;
+    border: none;
+    border-radius: 0rem;
+  }
 }
 @media screen and (max-width: 62.5rem) {
   .contact__links {
@@ -1628,77 +1632,6 @@ img {
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1100px) {
-  .projects__content {
-    width: 100%;
-    height: 100%;
-  }
-  .projects__list {
-    width: 100%;
-    padding: 2rem;
-    flex-direction: column;
-    gap: 19rem;
-  }
-  .projects__listitem {
-    flex-wrap: wrap;
-    width: 100%;
-    flex-direction: row;
-  }
-  .projects__img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 1rem;
-  }
-  .projects__wrap {
-    width: 100%;
-    background: white;
-    box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.2);
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    height: 30rem;
-    position: relative;
-    padding-left: 0rem;
-    padding-top: 0rem;
-    justify-content: center;
-    align-items: center;
-  }
-  .projects__description {
-    font-size: 1.5rem;
-    width: 22rem;
-    text-align: left;
-  }
-  .projects__title {
-    font-size: 2.5rem;
-  }
-  .projects__nav {
-    position: absolute;
-    left: 40%;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    bottom: 10%;
-  }
-  .projects__navitem {
-    height: 1rem;
-    width: rem;
-    background: #dcdcdc;
-    border-radius: 2rem;
-  }
-  .projects__wrap2 {
-    height: 30rem;
-  }
-  .projects__figure {
-    width: 100%;
-    height: 100%;
-    background: #7984e7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 2rem;
-    border-top-left-radius: 2rem;
-    border-bottom-right-radius: 0;
-  }
   .skills__text {
     width: 100%;
     left: 0%;

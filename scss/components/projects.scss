@@ -375,6 +375,7 @@ video{
 }
 
 .projects__panel {
+  margin-bottom: 5rem;
   max-height: 0;
   overflow: hidden;
 transition: max-height 0.2s ease-out;
@@ -404,6 +405,7 @@ transition: max-height 0.2s ease-out;
   width: 60%;
   border-bottom: #7984e7 3px solid;
   align-items: flex-end;
+  margin-bottom: 2rem;
 }
 
 .projects__wrapping:hover{
@@ -499,7 +501,7 @@ article:hover .projects__overlay {
 }
 
 .projects__modalart{
-  height: 200vh;
+  height: 100%;
   width: 100%;
   background: white;
   display: flex;
@@ -784,9 +786,7 @@ img{
   height: 50rem;
 }
 
-.projects__wrapper2{
-  margin-bottom: 10rem;
-}
+
 .projects__featureimg{
   object-fit: contain;
   transform: scale(1.4);
