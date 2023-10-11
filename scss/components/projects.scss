@@ -741,11 +741,7 @@ img{
 
 
   @media (max-width: 768px) {
-    .projects__wrapper {
-      width: 100%;
-      grid-template-columns: repeat(1, 1fr);
-      padding: 2rem; 
-    }
+  
 
     .projects__modalhead{
       width: 100%;
@@ -761,18 +757,6 @@ img{
       overflow-x: hidden;
     }
   
-    .projects__one,
-    .projects__two,
-    .projects__three,
-    .projects__four,
-    .projects__five,
-    .projects__six {
-      grid-column: auto;
-      grid-row: auto;
-      width: 100%; 
-      margin-bottom: 10px;
-      height: 32rem;
-    }
 
   .projects__img-3{
     transform: scale(1);
