@@ -36,8 +36,7 @@
 
     &__h2{
         background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+  
         font-size: 5.5rem;
         font-weight: 700;
     }
@@ -249,7 +248,7 @@
     justify-content: center;
     transition: 0.5s all;
     border-radius: 2rem;
-    border: #dedede 2px solid;
+    border: red 2px solid;
 }
 
 .projects__slide{

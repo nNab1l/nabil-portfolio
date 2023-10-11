@@ -19,9 +19,10 @@ body {
   font-family: "Segoe UI", sans-serif;
   overflow-x: hidden;
   cursor: none;
+  width: 100%;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
   background: rgba(204, 187, 237, 0.4274509804);
 }
 
@@ -301,8 +302,6 @@ span {
 }
 .projects__h2 {
   background: linear-gradient(to bottom right, #CCBBED, 50%, #7984e7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-size: 5.5rem;
   font-weight: 700;
 }
@@ -483,7 +482,7 @@ span {
   justify-content: center;
   transition: 0.5s all;
   border-radius: 2rem;
-  border: #dedede 2px solid;
+  border: red 2px solid;
 }
 
 .projects__slide {
@@ -1435,21 +1434,6 @@ img {
     padding: 5rem;
     max-width: 800px;
     margin: 0 auto;
-  }
-  .frontpage__sidenav {
-    position: fixed;
-    bottom: 6rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 90%;
-    max-width: 60rem;
-    height: 6rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: auto;
-    gap: 4rem;
   }
   .frontpage__listitem {
     margin-top: 0;
