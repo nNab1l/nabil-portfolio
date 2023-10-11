@@ -12,6 +12,7 @@
 
     &__heading{
         font-size: 5.5rem;
+        color: red;
     }
 
     &__featured{
@@ -248,7 +249,7 @@
     justify-content: center;
     transition: 0.5s all;
     border-radius: 2rem;
-    border: red 2px solid;
+    border: #dedede 2px solid;
 }
 
 .projects__slide{
@@ -666,7 +667,7 @@ article:hover .projects__overlay {
 
   .projects__img-3{
     width: 100%;
-    height: 320px;
+    height: 32rem;
     object-fit: contain;
     border-radius: 2rem;
     position: relative;
@@ -691,7 +692,7 @@ article:hover .projects__overlay {
   
   .projects__img-6{
     width: 100%;
-    height: 320px;
+    height: 32rem;
     object-fit: contain;
     border-radius: 2rem;
     position: relative;
@@ -739,7 +740,7 @@ img{
  
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 76.8rem) {
   
 
     .projects__modalhead{

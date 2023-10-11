@@ -282,6 +282,7 @@ span {
 }
 .projects__heading {
   font-size: 5.5rem;
+  color: red;
 }
 .projects__featured {
   display: flex;
@@ -482,7 +483,7 @@ span {
   justify-content: center;
   transition: 0.5s all;
   border-radius: 2rem;
-  border: red 2px solid;
+  border: #dedede 2px solid;
 }
 
 .projects__slide {
@@ -863,7 +864,7 @@ article:hover .projects__overlay {
 
 .projects__img-3 {
   width: 100%;
-  height: 320px;
+  height: 32rem;
   object-fit: contain;
   border-radius: 2rem;
   position: relative;
@@ -885,7 +886,7 @@ article:hover .projects__overlay {
 
 .projects__img-6 {
   width: 100%;
-  height: 320px;
+  height: 32rem;
   object-fit: contain;
   border-radius: 2rem;
   position: relative;
@@ -927,7 +928,7 @@ img {
   transform: scale(1.5);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 76.8rem) {
   .projects__modalhead {
     width: 100%;
     padding-left: 2rem;
@@ -1397,7 +1398,7 @@ img {
     border-radius: 0rem;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 110rem) {
   .projects__wrapper {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
@@ -1434,6 +1435,21 @@ img {
     padding: 5rem;
     max-width: 800px;
     margin: 0 auto;
+  }
+  .frontpage__sidenav {
+    position: fixed;
+    bottom: 6rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    max-width: 60rem;
+    height: 6rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    gap: 4rem;
   }
   .frontpage__listitem {
     margin-top: 0;
@@ -1614,7 +1630,7 @@ img {
     border-radius: 50%;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1100px) {
+@media only screen and (min-device-width: 76.8rem) and (max-device-width: 110rem) {
   .skills__text {
     width: 100%;
     left: 0%;
