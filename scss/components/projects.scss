@@ -737,11 +737,10 @@ img{
     transform: scale(1.5);
   }
   
+ 
 
 
-
-  @media (max-width: 900px) {
-  
+  @media (max-width: 768px) {
     .projects__wrapper {
       width: 100%;
       grid-template-columns: repeat(1, 1fr);
