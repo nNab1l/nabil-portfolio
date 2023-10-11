@@ -5,17 +5,7 @@
     }
 
     
-    .projects__wrapper {
-        width: 100%;
-        grid-template-columns: repeat(1, 1fr);
-        padding: 2rem; 
-      }
-
-    .projects__featurefig{
-        margin: 0rem;
-        border: none;
-        border-radius: 0rem;
-    }
+   
 
 
 }
@@ -24,7 +14,7 @@
 
 
 
-@media screen and (max-width: 62.5rem){
+@media screen and (max-width: 900px){
     .contact__links{
         padding: 1rem;
     }
