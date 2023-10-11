@@ -932,12 +932,13 @@ img {
   .projects__modalhead {
     width: 100%;
     padding-left: 2rem;
+    margin-top: 12rem;
   }
   .projects__modalh2 {
     font-size: 4.5rem;
   }
   .projects__modalart {
-    height: auto;
+    height: 100%;
     overflow-x: hidden;
   }
   .projects__img-3 {

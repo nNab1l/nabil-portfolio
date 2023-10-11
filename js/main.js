@@ -340,7 +340,6 @@ if (typeof toggleSidebar !== 'function') {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   const articles = document.querySelectorAll('[data-article]');
   articles.forEach(article => {
     const modalId = article.getAttribute('data-modal');
@@ -349,9 +348,6 @@ document.addEventListener('DOMContentLoaded', function () {
       modal.style.display = 'block';
       document.documentElement.style.overflow = 'hidden';
     });
-    if (isMobile) {
-      document.documentElement.style.overflow = 'hidden';
-    }
   });
 
   const modals = document.querySelectorAll('.projects__modal');
@@ -363,9 +359,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.documentElement.style.overflow = 'auto';
         document.documentElement.style.overflowX = 'hidden';
       });
-      if (isMobile) {
-        document.documentElement.style.overflow = 'auto';
-      }
+   
     });
   });
 });
