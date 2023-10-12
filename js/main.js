@@ -339,30 +339,30 @@ if (typeof toggleSidebar !== 'function') {
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const articles = document.querySelectorAll('[data-article]');
-  articles.forEach(article => {
-    const modalId = article.getAttribute('data-modal');
-    article.addEventListener('click', () => {
-      const modal = document.getElementById(modalId);
-      modal.style.display = 'block';
-      document.documentElement.style.overflow = 'hidden';
-    });
-  });
+// document.addEventListener('DOMContentLoaded', function () {
+//   const articles = document.querySelectorAll('[data-article]');
+//   articles.forEach(article => {
+//     const modalId = article.getAttribute('data-modal');
+//     article.addEventListener('click', () => {
+//       const modal = document.getElementById(modalId);
+//       modal.style.display = 'block';
+//       document.documentElement.style.overflow = 'hidden';
+//     });
+//   });
 
-  const modals = document.querySelectorAll('.projects__modal');
-  const closeButtons = document.querySelectorAll('.projects__modal--arrow');
-  modals.forEach(modal => {
-    closeButtons.forEach(closeButton => {
-      closeButton.addEventListener('click', (event) => {
-        modal.style.display = 'none';
-        document.documentElement.style.overflow = 'auto';
-        document.documentElement.style.overflowX = 'hidden';
-      });
+//   const modals = document.querySelectorAll('.projects__modal');
+//   const closeButtons = document.querySelectorAll('.projects__modal--arrow');
+//   modals.forEach(modal => {
+//     closeButtons.forEach(closeButton => {
+//       closeButton.addEventListener('click', (event) => {
+//         modal.style.display = 'none';
+//         document.documentElement.style.overflow = 'auto';
+//         document.documentElement.style.overflowX = 'hidden';
+//       });
    
-    });
-  });
-});
+//     });
+//   });
+// });
 
 
 

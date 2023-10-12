@@ -281,8 +281,8 @@ span {
   color: #707070;
 }
 .projects__heading {
+  color: green;
   font-size: 5.5rem;
-  background: blue;
 }
 .projects__featured {
   display: flex;
