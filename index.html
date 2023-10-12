@@ -20,7 +20,7 @@
 </head>
 <canvas id="bg"></canvas>
 
-<body>
+<body id="translatedContent">
     <div class="cursor"></div>
     <div class="cursor2"></div>
     <header>
@@ -75,7 +75,7 @@
                     <span class="wrap"></span>
                 </a>
                 <div>
-                    <a href="#works"><button class="frontpage__button">projects</button></a>
+                    <a href="#works"><button id="translateButton" class="frontpage__button">projects</button></a>
                 </div>
             </h1>
         </figure>
@@ -86,7 +86,7 @@
     <main class="main" id="works">
         <section class="projects">
             <div class="projects__div">
-                <h2 class="projects__heading">Featured Project<mark class="frontpage__mark">.</mark></h2>
+                <h2 class="projects__heading" id="h2">Featured Project<mark class="frontpage__mark">.</mark></h2>
             </div>
             <article id="featured" class="projects__featured">
                 <figure class="projects__featurefig">
@@ -121,7 +121,7 @@
                         </h2>
                     </div>
                 </article>
-                <!-- <div class="projects__modal" id="modal1" data-article="1">
+                <div class="projects__modal" id="modal1" data-article="1">
                     <div class="projects__modal-content">
 
                         <article class="projects__modalart">
@@ -170,7 +170,7 @@
                             </div>
                         </article>
                     </div>
-                </div> -->
+                </div>
              
                 <article class="projects__two" data-modal="modal2" data-article="2">
                     <img src="img/udemy.png" alt="" class="projects__img-2">
@@ -180,7 +180,7 @@
                         </h2>
                     </div>
                 </article>
-                <!-- <div class="projects__modal" id="modal2" data-article="2">
+                <div class="projects__modal" id="modal2" data-article="2">
                     <div class="projects__modal-content">
 
                         <article class="projects__modalart">
@@ -221,7 +221,7 @@
                             </div>
                         </article>
                     </div>
-                </div> -->
+                </div>
 
                 <article class="projects__three" data-modal="modal3" data-article="3">
                     <img class="projects__img-4" src="img/translate-language-5590462-4652683.png" alt="">
@@ -232,7 +232,7 @@
                     </div>
                     <p class="bee__p">AI/ML</p>
                 </article>
-                <!-- <div class="projects__modal" id="modal3" data-article="3">
+                <div class="projects__modal" id="modal3" data-article="3">
                     <div class="projects__modal-content">
 
                         <article class="projects__modalart">
@@ -297,7 +297,7 @@
                             </div>
                         </article>
                     </div>
-                </div> -->
+                </div>
                 <article class="projects__four" data-modal="modal4" data-article="4">
                     <img class="projects__img-4" src="img/newbee.png" alt="">
                     <div class="projects__overlay projects__overlay--fourth">
@@ -307,7 +307,7 @@
                     </div>
                     <p class="bee__p">AI/ML</p>
                 </article>
-                <!-- <div class="projects__modal" id="modal4" data-article="4">
+                <div class="projects__modal" id="modal4" data-article="4">
                     <div class="projects__modal-content">
 
                         <article class="projects__modalart">
@@ -356,7 +356,7 @@
                             </div>
                         </article>
                     </div>
-                </div> -->
+                </div>
                 <article class="projects__five" data-modal="modal5" data-article="5">
                     <img src="img/landing.png" alt="" class="projects__img-3">
                     <div class="projects__overlay projects__overlay--fifth">
@@ -365,7 +365,7 @@
                         </h2>
                     </div> 
                 </article>
-                <!-- <div class="projects__modal" id="modal5" data-article="5">
+                <div class="projects__modal" id="modal5" data-article="5">
                     <div class="projects__modal-content">
 
                         <article class="projects__modalart">
@@ -436,7 +436,7 @@
                             </div>
                         </article>
                     </div>
-                </div> -->
+                </div>
                 <article class="projects__six" data-modal="modal6" data-article="6">
                     <img src="img/2m.png" alt="" class="projects__img-6">
                     <div class="projects__overlay projects__overlay--sixth">
@@ -445,7 +445,7 @@
                         </h2>
                     </div>
                 </article>
-                <!-- <div class="projects__modal" id="modal6" data-article="6">
+                <div class="projects__modal" id="modal6" data-article="6">
                     <div class="projects__modal-content">
 
                         <article class="projects__modalart">
@@ -519,7 +519,7 @@
                         </article>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </section>
 
         <section class="skills" id="skills">

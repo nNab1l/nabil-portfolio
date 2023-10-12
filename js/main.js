@@ -339,30 +339,60 @@ if (typeof toggleSidebar !== 'function') {
 }
 
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const articles = document.querySelectorAll('[data-article]');
-//   articles.forEach(article => {
-//     const modalId = article.getAttribute('data-modal');
-//     article.addEventListener('click', () => {
-//       const modal = document.getElementById(modalId);
-//       modal.style.display = 'block';
-//       document.documentElement.style.overflow = 'hidden';
-//     });
-//   });
+document.addEventListener('DOMContentLoaded', function () {
+  const articles = document.querySelectorAll('[data-article]');
+  articles.forEach(article => {
+    const modalId = article.getAttribute('data-modal');
+    article.addEventListener('click', () => {
+      const modal = document.getElementById(modalId);
+      modal.style.display = 'block';
+      document.documentElement.style.overflow = 'hidden';
+    });
+  });
 
-//   const modals = document.querySelectorAll('.projects__modal');
-//   const closeButtons = document.querySelectorAll('.projects__modal--arrow');
-//   modals.forEach(modal => {
-//     closeButtons.forEach(closeButton => {
-//       closeButton.addEventListener('click', (event) => {
-//         modal.style.display = 'none';
-//         document.documentElement.style.overflow = 'auto';
-//         document.documentElement.style.overflowX = 'hidden';
-//       });
+  const modals = document.querySelectorAll('.projects__modal');
+  const closeButtons = document.querySelectorAll('.projects__modal--arrow');
+  modals.forEach(modal => {
+    closeButtons.forEach(closeButton => {
+      closeButton.addEventListener('click', (event) => {
+        modal.style.display = 'none';
+        document.documentElement.style.overflow = 'auto';
+        document.documentElement.style.overflowX = 'hidden';
+      });
    
-//     });
-//   });
-// });
+    });
+  });
+});
+
+document.getElementById('translateButton').addEventListener('click', function() {
+  var contentToTranslate = document.body.innerText;
+  
+  var sourceLanguage = 'en';
+  var targetLanguage = 'fr'; 
+
+  fetch('https://libretranslate.com/translate', {
+      method: 'POST',
+      body: JSON.stringify({
+          q: contentToTranslate,
+          source: sourceLanguage,
+          target: targetLanguage
+      }),
+      headers: {
+          'Content-Type': 'application/json',
+      },
+  })
+      .then(response => response.json())
+      .then(data => {
+          if (data.translatedText) {
+              document.getElementById('translatedContent').textContent = data.translatedText;
+          } else {
+              alert('Translation failed. Please check your input and try again.');
+          }
+      })
+      .catch(error => {
+          alert('Error: ' + error);
+      });
+});
 
 
 
