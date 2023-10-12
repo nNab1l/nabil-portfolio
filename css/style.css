@@ -282,6 +282,7 @@ span {
 }
 .projects__heading {
   font-size: 5.5rem;
+  color: yellow;
 }
 .projects__featured {
   display: flex;

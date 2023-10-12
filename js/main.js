@@ -364,36 +364,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.getElementById('translateButton').addEventListener('click', function() {
-  var contentToTranslate = document.body.innerText;
-  
-  var sourceLanguage = 'en';
-  var targetLanguage = 'fr'; 
-
-  fetch('https://libretranslate.com/translate', {
-      method: 'POST',
-      body: JSON.stringify({
-          q: contentToTranslate,
-          source: sourceLanguage,
-          target: targetLanguage
-      }),
-      headers: {
-          'Content-Type': 'application/json',
-      },
-  })
-      .then(response => response.json())
-      .then(data => {
-          if (data.translatedText) {
-              document.getElementById('translatedContent').textContent = data.translatedText;
-          } else {
-              alert('Translation failed. Please check your input and try again.');
-          }
-      })
-      .catch(error => {
-          alert('Error: ' + error);
-      });
-});
-
 
 
 var wrappers = document.querySelectorAll(".projects__wrapper2");
@@ -420,3 +390,35 @@ wrappers.forEach(function(wrapper) {
     isClicked = !isClicked; 
   });
 });
+
+// Function to translate the body content
+function translateBodyToDutch() {
+  const body = document.body;
+  const textToTranslate = body.textContent; // Get the text content of the body
+
+  // Source language code (e.g., "en" for English)
+  const sourceLanguage = "en";
+
+  // Target language code (e.g., "nl" for Dutch)
+  const targetLanguage = "nl";
+
+  // URL for the LibreTranslate API
+  const apiUrl = `https://libretranslate.com/translate?source=${sourceLanguage}&target=${targetLanguage}&q=${encodeURIComponent(textToTranslate)}`;
+
+  // Make a request to the API
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const translatedText = data.translatedText;
+      console.log("Translated text:", translatedText);
+
+      // Update the body content with the translated text
+      body.textContent = translatedText;
+    })
+    .catch(error => {
+      console.error('Error translating text:', error);
+    });
+}
+
+// Add a click event listener to the button
+document.getElementById('translateButton').addEventListener('click', translateBodyToDutch);
