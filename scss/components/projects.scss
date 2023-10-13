@@ -12,7 +12,6 @@
 
     &__heading{
         font-size: 5.5rem;
-        color: aqua;
     }
 
     &__featured{
@@ -203,6 +202,7 @@
 
 .nav__mobile{
     position: absolute;
+    height: 100vh;
     top: 0;
     left: 0;
     bottom: 0;
