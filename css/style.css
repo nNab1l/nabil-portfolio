@@ -22,6 +22,14 @@ body {
   width: 100%;
 }
 
+header {
+  overflow-x: hidden;
+}
+
+main {
+  overflow-x: hidden;
+}
+
 ::-moz-selection {
   background: rgba(204, 187, 237, 0.4274509804);
 }
@@ -282,7 +290,7 @@ span {
 }
 .projects__heading {
   font-size: 5.5rem;
-  color: orange;
+  color: blue;
 }
 .projects__featured {
   display: flex;
