@@ -462,11 +462,11 @@ span {
 .nav__mobileList {
   list-style: none;
   position: relative;
-  top: 5%;
+  top: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
 }
 
@@ -771,6 +771,11 @@ article:hover .projects__overlay {
 }
 
 .projects__modalp {
+  color: #707070;
+  padding-top: 2rem;
+}
+
+.projects__modalTime {
   color: #707070;
   padding-top: 2rem;
 }
