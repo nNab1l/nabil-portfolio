@@ -396,6 +396,8 @@ wrappers.forEach(function(wrapper) {
   });
 });
 
+document.cookie = "CONSENT=value; SameSite=None; Secure";
+
 let isTranslated = false;
 
 function initializeTranslation() {
