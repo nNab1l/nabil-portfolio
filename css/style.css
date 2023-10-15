@@ -505,7 +505,7 @@ span {
 .projects__slider {
   width: 14rem;
   height: 0.3rem;
-  background: #eee;
+  background: #c0c0c0;
   border-radius: 2rem;
 }
 
@@ -941,6 +941,10 @@ img {
   transform: scale(1.5);
 }
 
+.nav__icon {
+  font-size: 2.5rem;
+}
+
 @media screen and (max-width: 768px) {
   .projects__modalhead {
     width: 100%;
@@ -1241,8 +1245,8 @@ img {
   display: block;
   content: "";
   position: absolute;
-  width: 42rem;
-  height: 42rem;
+  width: 41rem;
+  height: 41rem;
   background: #CCBBED;
   border-radius: 2rem;
   z-index: -10;
