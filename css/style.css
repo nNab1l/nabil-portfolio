@@ -89,6 +89,7 @@ header {
 }
 .nav__div {
   display: flex;
+  gap: 2.5rem;
   justify-content: flex-start;
 }
 

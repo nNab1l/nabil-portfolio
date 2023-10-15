@@ -229,19 +229,24 @@ function resizeRenderer() {
   
   const button = document.getElementById("js--menu");
   const navigation = document.getElementById("js--nav");
+  const lang = document.getElementById("js--lang");
+
   
   let isOpen = false;
   navigation.style.display = "none";
+  lang.style.display = "none";
 
   
   
   button.onclick = function() {
     if(isOpen){
       navigation.style.display = "block";
+      lang.style.display = "block";
       isOpen = false;
     }
     else{
       navigation.style.display = "none";
+      lang.style.display = "none";
       isOpen = true;
     }
   }
