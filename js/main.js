@@ -416,6 +416,7 @@ function toggleTranslation() {
 }
 
 document.getElementById('translateButton').addEventListener('click', toggleTranslation);
+document.getElementById('translateButton--mobile').addEventListener('click', toggleTranslation);
 
 
 
