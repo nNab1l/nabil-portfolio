@@ -229,24 +229,19 @@ function resizeRenderer() {
   
   const button = document.getElementById("js--menu");
   const navigation = document.getElementById("js--nav");
-  const lang = document.getElementById("js--lang");
-
   
   let isOpen = false;
   navigation.style.display = "none";
-  lang.style.display = "none";
 
   
   
   button.onclick = function() {
     if(isOpen){
       navigation.style.display = "block";
-      lang.style.display = "block";
       isOpen = false;
     }
     else{
       navigation.style.display = "none";
-      lang.style.display = "none";
       isOpen = true;
     }
   }
@@ -395,30 +390,5 @@ wrappers.forEach(function(wrapper) {
     isClicked = !isClicked; 
   });
 });
-
-document.cookie = "CONSENT=value; SameSite=None; Secure";
-
-let isTranslated = false;
-
-function initializeTranslation() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'nl',
-        autoDisplay: false
-    }, 'google_translate_element');
-    isTranslated = true;
-}
-
-function toggleTranslation() {
-    if (isTranslated) {
-        location.reload();
-    } else {
-        initializeTranslation();
-    }
-}
-
-document.getElementById('translateButton').addEventListener('click', toggleTranslation);
-document.getElementById('translateButton--mobile').addEventListener('click', toggleTranslation);
-
 
 

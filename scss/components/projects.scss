@@ -273,7 +273,7 @@
     background: #707070;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-    border-radius: 2rem; /* Start with 0 width */
+    border-radius: 2rem; 
     transform-origin: left center;
 }
 
@@ -463,7 +463,7 @@ transition: max-height 0.2s ease-out;
 }
 
 article:hover .projects__overlay {
-  opacity: 1; /* Fade in by setting opacity to 1 */
+  opacity: 1; 
   visibility: visible; 
 }
 
@@ -729,6 +729,10 @@ article:hover .projects__overlay {
     position: absolute;
     right: 5%;
     top: 5%;
+  }
+
+  .projects__img-2:hover{
+    transform: scale(1.2);
   }
 
 img{
