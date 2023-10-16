@@ -247,35 +247,7 @@ function resizeRenderer() {
   }
   
   
-document.addEventListener('DOMContentLoaded', function() {
-  const sidenav = document.getElementById("sidenav");
-  const featured = document.getElementById("featured");
-
-     function calculateOverlapPercentage(rect1, rect2) {
-        const overlapX = Math.max(0, Math.min(rect1.right, rect2.right) - Math.max(rect1.left, rect2.left));
-        const overlapY = Math.max(0, Math.min(rect1.bottom, rect2.bottom) - Math.max(rect1.top, rect2.top));
-
-        const areaOfRect1 = (rect1.right - rect1.left) * (rect1.bottom - rect1.top);
-
-        return (overlapX * overlapY) / areaOfRect1 * 100;
-    }
-
-  function checkOverlap(){
-    const rect1 = sidenav.getBoundingClientRect();
-    const rect2 = featured.getBoundingClientRect();
-
-    const overlapPercentage = calculateOverlapPercentage(rect1, rect2);
-
-    if (overlapPercentage >= 50) {
-        sidenav.classList.add('touched');
-    } else {
-        sidenav.classList.remove('touched');
-    }
-  };
-  checkOverlap();
-  window.addEventListener('scroll', checkOverlap);
-});
-
+  
 
 document.addEventListener("DOMContentLoaded", async function () {
   const sliders = document.querySelectorAll(".projects__fill");
@@ -338,15 +310,22 @@ if (typeof toggleSidebar !== 'function') {
   toggleSidebar();
 }
 
-
+// JavaScript code
 document.addEventListener('DOMContentLoaded', function () {
   const articles = document.querySelectorAll('[data-article]');
+  const sidenav = document.getElementById('sidenav');
+
   articles.forEach(article => {
     const modalId = article.getAttribute('data-modal');
     article.addEventListener('click', () => {
       const modal = document.getElementById(modalId);
       modal.style.display = 'block';
       document.documentElement.style.overflow = 'hidden';
+
+      const mediaQuery = window.matchMedia('(max-width: 62.5rem)');
+      if (mediaQuery.matches) {
+        sidenav.classList.add('hidden-sidenav');
+      }
     });
   });
 
@@ -358,11 +337,16 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = 'none';
         document.documentElement.style.overflow = 'auto';
         document.documentElement.style.overflowX = 'hidden';
+
+        const mediaQuery = window.matchMedia('(max-width: 62.5rem)');
+        if (mediaQuery.matches) {
+          sidenav.classList.remove('hidden-sidenav');
+        }
       });
-   
     });
   });
 });
+
 
 
 
@@ -392,25 +376,3 @@ wrappers.forEach(function(wrapper) {
 });
 
 
-
-
-let isTranslated = false;
-
-function initializeTranslation() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'nl',
-        autoDisplay: false
-    }, 'google_translate_element');
-    isTranslated = true;
-}
-
-function toggleTranslation() {
-    if (isTranslated) {
-        location.reload();
-    } else {
-        initializeTranslation();
-    }
-}
-
-document.getElementById('translateButton').addEventListener('click', toggleTranslation);

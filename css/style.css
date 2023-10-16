@@ -941,6 +941,10 @@ img {
   transition: 0.3s all;
 }
 
+.hidden-sidenav {
+  display: none;
+}
+
 .projects__img-6:hover {
   transform: scale(1.5);
 }

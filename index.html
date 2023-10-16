@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.js"></script>
     <script type="module" src="js/main.js" defer></script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +22,6 @@
 <canvas id="bg"></canvas>
 
 <body>
-    <style>#google_translate_element,.skiptranslate{display:none;}body{top:0!important;}</style>
-    <div id="google_translate_element"></div>
     <div class="cursor"></div>
     <div class="cursor2"></div>
     <header>
@@ -38,7 +36,6 @@
             <li class="nav__listitem"><a href="#skills" class="nav__link">Skills</a></li>
             <li class="nav__listitem"><a href="#about" class="nav__link">About</a></li>
             <li class="nav__listitem"><a href="#contact" class="nav__link">Contact</a></li>
-            <li class="nav__listitem"><i id="translateButton" class="fa-solid fa-language nav__icon"></i>
         </nav>
         <nav id="js--nav" class="nav__mobile">
             <ul class="nav__mobileList">
@@ -60,13 +57,13 @@
 
         <figure class="frontpage">
             <ul id="sidenav" class="frontpage__sidenav">
-                <li class="frontpage__listitem"> <a href="https://github.com/nNab1l"><i
+                <li class="frontpage__listitem"> <a href="https://github.com/nNab1l" target="_blank"><i
                             class="fa-brands fa-github frontpage__sidenavicon"></i></a></li>
-                <li class="frontpage__listitem"> <a href="https://www.linkedin.com/in/nabil-salimi-5a5616267/"><i
+                <li class="frontpage__listitem"> <a href="https://www.linkedin.com/in/nabil-salimi-5a5616267/" target="_blank"><i
                             class="fa-brands fa-linkedin frontpage__sidenavicon"></a></i></li>
-                <li class="frontpage__listitem"> <a href="mailto:nabilsalimi0229@gmail.com"><i
+                <li class="frontpage__listitem"> <a href="mailto:nabilsalimi0229@gmail.com" target="_blank"><i
                             class="fa-solid fa-envelope frontpage__sidenavicon"></a></i></li>
-                <li class="frontpage__listitem"> <a href="https://discordapp.com/users/626027716474306561"><i
+                <li class="frontpage__listitem"> <a href="https://discordapp.com/users/626027716474306561" target="_blank"><i
                             class="fa-brands fa-discord frontpage__sidenavicon"></a></i></li>
                 <li class="frontpage__listitem frontpage__listitem--five">
                     <p class="pn">
@@ -221,9 +218,12 @@
                                         <ul class="projects__bullet">
                                             <li class="projects__bulletlist">
                                                 <i class="fa-solid fa-arrow-right-long"></i>
-                                                Simple and readable code
-                                          
-                                          
+                                                Used Bem for clear and readable HTML
+                                            </li>
+                                            <li class="projects__bulletlist">
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                                Used scss functions such as mixins and nesting
+                                            </li>
                                         </ul>
                                     </div>
                                     </div>
@@ -613,15 +613,15 @@
                 </h2>
                 <p class="contact__paragraph">Let us discuss our options</p>
                 <ul class="contact__links">
-                    <li class="contact__listitem contact__listitem--first"><a href="https://github.com/nNab1l"><i
+                    <li class="contact__listitem contact__listitem--first"><a href="https://github.com/nNab1l" target="_blank"><i
                                 class="fa-brands fa-github contact__icon contact__icon--first"></i></a>
                     </li>
                     <li class="contact__listitem  contact__listitem--second"><a
-                            href="https://www.linkedin.com/in/nabil-salimi-5a5616267/"><i
+                            href="https://www.linkedin.com/in/nabil-salimi-5a5616267/" target="_blank"><i
                                 class="fa-brands fa-linkedin contact__icon contact__icon--second"></i></a>
                     </li>
                     <li class="contact__listitem  contact__listitem--third"> <a
-                            href="https://discordapp.com/users/626027716474306561"><i
+                            href="https://discordapp.com/users/626027716474306561" target="_blank"><i
                                 class="fa-brands fa-discord contact__icon contact__icon--third"></i></a>
                     </li>
                     <li class="contact__listitem  contact__listitem--fourth"> <a
