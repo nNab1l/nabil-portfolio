@@ -392,3 +392,25 @@ wrappers.forEach(function(wrapper) {
 });
 
 
+
+
+let isTranslated = false;
+
+function initializeTranslation() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'nl',
+        autoDisplay: false
+    }, 'google_translate_element');
+    isTranslated = true;
+}
+
+function toggleTranslation() {
+    if (isTranslated) {
+        location.reload();
+    } else {
+        initializeTranslation();
+    }
+}
+
+document.getElementById('translateButton').addEventListener('click', toggleTranslation);
