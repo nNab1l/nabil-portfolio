@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const image = document.getElementById("image");
   const video = document.getElementById("video");
 
-  const images = ["ocr-preview.png", "img/ocr.png", "img/reimagine.png", "img/lang2.png"];
+  const images = ["ocr-preview.png", "img/ocr.webp", "img/reimagine.webp", "img/lang2.webp"];
   let currentIndex = 0;
 
   function updateSlider(index) {
