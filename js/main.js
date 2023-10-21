@@ -1,24 +1,3 @@
-const handleOnMouseMove = e => {
-    const { currentTarget: target } = e;
-
-    const rect = target.getBoundingClientRect(),
-        y = e.clientX - rect.left,
-        x = e.clientY - rect.top;
-
-    target.style.setProperty("--mouse-x", `${x}px`);
-    target.style.setProperty("--mouse-y", `${y}px`);
-}
-
-for(const card of document.querySelectorAll(".skills__listitem")){
-    card.onmousemove = e => handleOnMouseMove(e);
-}
-
-
-
-
-
-
-
 var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -247,46 +226,119 @@ function resizeRenderer() {
   }
   
   
+  document.addEventListener("DOMContentLoaded", function () {
+    const sliders = document.querySelectorAll(".projects__fill");
+    const image = document.getElementById("image");
+    const video = document.getElementById("video");
+    const contentContainer = document.getElementById("featured");
   
-
-document.addEventListener("DOMContentLoaded", async function () {
-  const sliders = document.querySelectorAll(".projects__fill");
-  const image = document.getElementById("image");
-  const video = document.getElementById("video");
-
-  const images = ["ocr-preview.png", "img/ocr.webp", "img/reimagine.webp", "img/lang2.webp"];
-  let currentIndex = 0;
-
-  function updateSlider(index) {
-      const currentSlider = sliders[index];
-      currentSlider.style.width = "0%";
-      currentSlider.style.animation = "fill 6s linear forwards";
-
-      return new Promise((resolve) => {
-          setTimeout(() => {
-              currentSlider.style.animation = "";
-              resolve();
-          }, 6000);
+    const images = ["img/ocr.webp", "img/reimagine.webp", "img/langpreview.png"];
+    let currentIndex = 0;
+    let isFirstRun = true;
+    let isPaused = true; // Initially paused
+    let isAnimating = false;
+  
+    function resetSliders() {
+      sliders.forEach(slider => {
+        slider.style.width = "0%";
+        slider.style.animation = "none";
       });
-  }
-
-  while (true) {
-      await updateSlider(currentIndex);
-      currentIndex++;
-      if (currentIndex >= sliders.length) {
-          currentIndex = 0;
+    }
+  
+    function updateSlider(index) {
+      if (!isPaused) {
+        const currentSlider = sliders[index];
+        currentSlider.style.animation = "fill 6s linear forwards";
+  
+        isAnimating = true;
+  
+        const animationEndHandler = () => {
+          if (currentSlider.style.animationPlayState !== "paused") {
+            isAnimating = false;
+            currentIndex++;
+            if (currentIndex >= sliders.length) {
+              currentIndex = 0;
+            }
+            displayContent();
+            resetSliders();
+            updateSlider(currentIndex);
+          }
+          currentSlider.removeEventListener("animationend", animationEndHandler);
+        };
+  
+        currentSlider.addEventListener("animationend", animationEndHandler);
       }
-
+    }
+  
+    function displayContent() {
       if (currentIndex === 0) {
-          video.style.display = "block";
-          image.style.display = "none";
+        video.style.display = "block";
+        if (!isFirstRun) {
+          video.currentTime = 0;
+        }
+        image.style.display = "none";
       } else {
-          video.style.display = "none";
-          image.style.display = "block";
-          image.src = images[currentIndex];
+        video.style.display = "none";
+        image.style.display = "block";
+        image.src = images[currentIndex - 1];
       }
-  }
-});
+    }
+  
+    function updateAndDisplay() {
+      if (!isAnimating) {
+        resetSliders();
+        displayContent();
+        if (isFirstRun) {
+          isFirstRun = false;
+        }
+        currentIndex++;
+        if (currentIndex >= sliders.length) {
+          currentIndex = 0;
+        }
+        updateSlider(currentIndex);
+      }
+    }
+  
+    // Initial display with a pause of 2 seconds
+    resetSliders();
+    displayContent();
+    setTimeout(() => {
+      isPaused = false;
+      updateSlider(currentIndex);
+    }, 2000); // Adjust the time as needed
+  
+    const play = document.getElementById("play");
+    const pause = document.getElementById("pause");
+    play.style.display = "none";
+    pause.style.display = "block";
+  
+    // Pause both the animation and timer on mouse enter
+    contentContainer.addEventListener("mouseleave", () => {
+      isPaused = true;
+      video.pause();
+      play.style.display = "block";
+      pause.style.display = "none";
+      sliders.forEach(slider => {
+        slider.style.animationPlayState = "paused";
+      });
+    });
+  
+    // Resume both the animation and timer on mouse leave
+    contentContainer.addEventListener("mouseenter", () => {
+      isPaused = false;
+      play.style.display = "none";
+      pause.style.display = "block";
+      video.play();
+      sliders.forEach(slider => {
+        slider.style.animationPlayState = "running";
+      });
+    });
+  
+    // Start the timer-based animation loop
+    setInterval(updateAndDisplay, 6000);
+  });
+  
+  
 
 if (typeof toggleSidebar !== 'function') {
   function toggleSidebar() {

@@ -494,17 +494,27 @@ span {
   border: #dedede 2px solid;
 }
 
+.projects__git {
+  position: absolute;
+  right: 1%;
+}
+
+.projects__sliderIcon {
+  color: #707070;
+}
+
 .projects__slide {
   display: flex;
   gap: 2.5rem;
   list-style: none;
+  align-items: center;
   padding-bottom: 3rem;
   position: absolute;
 }
 
 .projects__slider {
   width: 14rem;
-  height: 0.3rem;
+  height: 0.25rem;
   background: #c0c0c0;
   border-radius: 2rem;
 }
@@ -740,10 +750,32 @@ article:hover .projects__overlay {
   height: 40rem;
   background: #f1f1f1;
   border-radius: 2rem;
+  position: relative;
 }
 .projects__modalfig--cover {
   height: 55rem;
   background: white;
+}
+
+.projects__git {
+  position: absolute;
+  top: 5%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  right: 5%;
+}
+.projects__git--shadow {
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.projects__gitIcon {
+  font-size: 2.5rem;
+  color: #707070;
 }
 
 .projects__modalimg {
@@ -754,16 +786,9 @@ article:hover .projects__overlay {
   border-radius: 2rem;
   overflow: auto;
 }
-.projects__modalimg:hover {
-  transform: scale(0.9);
-}
 .projects__modalimg--cover {
   object-fit: cover;
 }
-.projects__modalimg--cover:hover {
-  transform: scale(1);
-}
-
 .projects__modalh3 {
   padding-top: 12rem;
   font-size: 3rem;
@@ -1447,6 +1472,7 @@ img {
 @media screen and (max-width: 68.75rem) {
   body {
     overflow-x: hidden;
+    cursor: auto;
   }
   .projects__featurefig {
     margin: 0rem;
@@ -1455,6 +1481,12 @@ img {
   }
   .projects__div {
     text-align: center;
+  }
+  .cursor {
+    display: none;
+  }
+  .cursor2 {
+    display: none;
   }
 }
 @media screen and (max-width: 1100px) {

@@ -2,6 +2,8 @@
 
     body{
         overflow-x: hidden;
+        cursor: auto;
+
     }
 
     
@@ -15,6 +17,14 @@
 
     .projects__div{
         text-align: center;
+    }
+
+    .cursor{
+        display: none;
+    }
+
+    .cursor2{
+        display: none;
     }
 
 
