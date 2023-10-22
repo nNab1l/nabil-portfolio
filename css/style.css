@@ -1508,6 +1508,12 @@ img {
     margin-bottom: 10px;
     height: 32rem;
   }
+  .projects__featureimg {
+    object-fit: contain;
+    transform: scale(1.2);
+    padding: 5rem;
+    height: 100%;
+  }
 }
 @media screen and (max-width: 62.5rem) {
   .contact__links {
