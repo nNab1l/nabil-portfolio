@@ -336,7 +336,7 @@ function resizeRenderer() {
     }
   
     if (mediaQuery.matches) {
-      contentContainer.addEventListener("click", (event) => {
+      contentContainer.addEventListener("touchstart", (event) => {
         event.preventDefault();
         isPaused = !isPaused;
         if (isPaused) {
