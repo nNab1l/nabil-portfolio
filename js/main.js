@@ -299,42 +299,67 @@ function resizeRenderer() {
       }
     }
   
-    // Initial display with a pause of 2 seconds
     resetSliders();
     displayContent();
     setTimeout(() => {
       isPaused = false;
       updateSlider(currentIndex);
-    }, 2000); // Adjust the time as needed
+    }, 2000); 
   
     const play = document.getElementById("play");
     const pause = document.getElementById("pause");
     play.style.display = "none";
     pause.style.display = "block";
-  
-    // Pause both the animation and timer on mouse enter
-    contentContainer.addEventListener("mouseleave", () => {
-      isPaused = true;
-      video.pause();
-      play.style.display = "block";
-      pause.style.display = "none";
-      sliders.forEach(slider => {
-        slider.style.animationPlayState = "paused";
+    video.play()
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+    if (!mediaQuery.matches) {
+      contentContainer.addEventListener("mouseleave", () => {
+        isPaused = true;
+        video.pause();
+        play.style.display = "block";
+        pause.style.display = "none";
+        sliders.forEach(slider => {
+          slider.style.animationPlayState = "paused";
+        });
       });
-    });
   
-    // Resume both the animation and timer on mouse leave
-    contentContainer.addEventListener("mouseenter", () => {
-      isPaused = false;
-      play.style.display = "none";
-      pause.style.display = "block";
-      video.play();
-      sliders.forEach(slider => {
-        slider.style.animationPlayState = "running";
+      contentContainer.addEventListener("mouseenter", () => {
+        isPaused = false;
+        play.style.display = "none";
+        pause.style.display = "block";
+        video.play();
+        sliders.forEach(slider => {
+          slider.style.animationPlayState = "running";
+        });
       });
-    });
+    }
   
-    // Start the timer-based animation loop
+    if (mediaQuery.matches) {
+      contentContainer.addEventListener("click", () => {
+        isPaused = !isPaused;
+        if (isPaused) {
+          // Paused, show play symbol
+          pause.style.display = "none";
+          play.style.display = "block";
+          isPaused = true;
+          video.pause();
+          sliders.forEach(slider => {
+            slider.style.animationPlayState = "paused";
+          });
+        } else {
+          // Playing, show pause symbol
+          play.style.display = "none";
+          pause.style.display = "block";
+          isPaused = false;
+          video.play();
+          sliders.forEach(slider => {
+            slider.style.animationPlayState = "running";
+          });
+        }
+      });
+    }
+
     setInterval(updateAndDisplay, 6000);
   });
   
