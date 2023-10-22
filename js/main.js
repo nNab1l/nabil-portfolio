@@ -336,10 +336,10 @@ function resizeRenderer() {
     }
   
     if (mediaQuery.matches) {
-      contentContainer.addEventListener("click", () => {
+      contentContainer.addEventListener("click", (event) => {
+        event.preventDefault();
         isPaused = !isPaused;
         if (isPaused) {
-          // Paused, show play symbol
           pause.style.display = "none";
           play.style.display = "block";
           isPaused = true;
@@ -348,7 +348,6 @@ function resizeRenderer() {
             slider.style.animationPlayState = "paused";
           });
         } else {
-          // Playing, show pause symbol
           play.style.display = "none";
           pause.style.display = "block";
           isPaused = false;
@@ -387,7 +386,6 @@ if (typeof toggleSidebar !== 'function') {
   toggleSidebar();
 }
 
-// JavaScript code
 document.addEventListener('DOMContentLoaded', function () {
   const articles = document.querySelectorAll('[data-article]');
   const sidenav = document.getElementById('sidenav');
