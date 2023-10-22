@@ -311,7 +311,7 @@ function resizeRenderer() {
     play.style.display = "none";
     pause.style.display = "block";
     video.play()
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 900px)");
 
     if (!mediaQuery.matches) {
       contentContainer.addEventListener("mouseleave", () => {
