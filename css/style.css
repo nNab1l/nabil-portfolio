@@ -1188,6 +1188,13 @@ img {
 .skills__heading {
   font-size: 5.5rem;
 }
+.skills__p {
+  font-size: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
 
 .skills__responsive {
   display: flex;

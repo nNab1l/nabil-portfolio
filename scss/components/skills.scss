@@ -100,6 +100,14 @@
     &__heading{
         font-size: 5.5rem;
     }
+
+    &__p {
+      font-size: 2rem;
+      padding-top: 1rem;
+      text-align: center;
+      color: white;
+      padding: 1rem;
+    }
 }
 
 
@@ -140,6 +148,7 @@
     object-fit: cover;
     padding: 5rem;
 }
+
 
 .skills__resHeading{
     font-size: 5.5rem;
