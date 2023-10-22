@@ -336,8 +336,12 @@ function resizeRenderer() {
     }
   
     if (mediaQuery.matches) {
-      contentContainer.addEventListener("touchstart", (event) => {
-        event.preventDefault();
+      contentContainer.addEventListener("click", () => {
+        video.addEventListener('fullscreenchange', (event) => {
+          if (document.fullscreenElement === video) {
+            document.exitFullscreen();
+          }
+        });
         isPaused = !isPaused;
         if (isPaused) {
           pause.style.display = "none";
