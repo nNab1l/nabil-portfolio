@@ -53,6 +53,14 @@
         margin-bottom: 10px;
         height: 32rem;
       }
+
+      .projects__featureimg{
+        object-fit: contain;
+        transform: scale(1.4);
+        padding: 5rem;
+        height: 100%;
+      }
+      
 }
 
 
