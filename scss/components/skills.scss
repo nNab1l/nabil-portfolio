@@ -309,7 +309,7 @@
 
   $ease-out-quint			:	cubic-bezier(0.230, 1.000, 0.720, 1.000);
 $default-border:#555;
-.menu-indicator {
+.skills__menu-indicator {
         position: absolute;
         display: none;
         left: 50%;
@@ -319,12 +319,12 @@ $default-border:#555;
         top: 75%;
         text-align: center;
      
-        .indicator-wrapper {
+        .skills__indicator-wrapper {
             transform: translate3d(0, 0, 0);
             width: 150px;
             margin: 0 auto;
 
-            .indicator-cursor {
+            .skills__indicator-cursor {
 							width:25px;
 							//height:40px;
                 position: absolute;
@@ -338,7 +338,7 @@ $default-border:#555;
                 }
             }
 
-            .box-wrapper {
+            .skills__box-wrapper {
                 width: 150px;
                 overflow: hidden;
                 height: 50px;
@@ -359,8 +359,9 @@ $default-border:#555;
                 }
 
 
-                .box-outer {
+                .skills__box-outer {
                     position: relative;
+                    list-style: none;
                     top: calc(50% - 1em);
                     animation: box-animation 1.2s $ease-out-quint infinite;
                     @keyframes box-animation {
@@ -373,7 +374,7 @@ $default-border:#555;
                     }
                 }
 
-                .box {
+                .skills__box {
                     position: absolute;
                     width: $widthOfBox;
                     height: 2em;

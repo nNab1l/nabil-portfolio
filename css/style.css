@@ -1379,7 +1379,7 @@ img {
     right: 0;
   }
 }
-.menu-indicator {
+.skills__menu-indicator {
   position: absolute;
   display: none;
   left: 50%;
@@ -1389,12 +1389,12 @@ img {
   top: 75%;
   text-align: center;
 }
-.menu-indicator .indicator-wrapper {
+.skills__menu-indicator .skills__indicator-wrapper {
   transform: translate3d(0, 0, 0);
   width: 150px;
   margin: 0 auto;
 }
-.menu-indicator .indicator-wrapper .indicator-cursor {
+.skills__menu-indicator .skills__indicator-wrapper .skills__indicator-cursor {
   width: 25px;
   position: absolute;
   top: 1.75em;
@@ -1411,7 +1411,7 @@ img {
     transform: rotate(0deg);
   }
 }
-.menu-indicator .indicator-wrapper .box-wrapper {
+.skills__menu-indicator .skills__indicator-wrapper .skills__box-wrapper {
   width: 150px;
   overflow: hidden;
   height: 50px;
@@ -1419,7 +1419,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-.menu-indicator .indicator-wrapper .box-wrapper:before {
+.skills__menu-indicator .skills__indicator-wrapper .skills__box-wrapper:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1430,8 +1430,9 @@ img {
   background: radial-gradient(ellipse at center, rgba(247, 246, 243, 0) 0%, #fff 70%);
   z-index: 2;
 }
-.menu-indicator .indicator-wrapper .box-wrapper .box-outer {
+.skills__menu-indicator .skills__indicator-wrapper .skills__box-wrapper .skills__box-outer {
   position: relative;
+  list-style: none;
   top: calc(50% - 1em);
   animation: box-animation 1.2s cubic-bezier(0.23, 1, 0.72, 1) infinite;
 }
@@ -1443,23 +1444,23 @@ img {
     left: -5em;
   }
 }
-.menu-indicator .indicator-wrapper .box-wrapper .box {
+.skills__menu-indicator .skills__indicator-wrapper .skills__box-wrapper .skills__box {
   position: absolute;
   width: 3em;
   height: 2em;
   border-radius: 3px;
   border: 1px solid #555;
 }
-.menu-indicator .indicator-wrapper .box-wrapper .box:nth-of-type(0) {
+.skills__menu-indicator .skills__indicator-wrapper .skills__box-wrapper .skills__box:nth-of-type(0) {
   left: 0em;
 }
-.menu-indicator .indicator-wrapper .box-wrapper .box:nth-of-type(1) {
+.skills__menu-indicator .skills__indicator-wrapper .skills__box-wrapper .skills__box:nth-of-type(1) {
   left: 4.25em;
 }
-.menu-indicator .indicator-wrapper .box-wrapper .box:nth-of-type(2) {
+.skills__menu-indicator .skills__indicator-wrapper .skills__box-wrapper .skills__box:nth-of-type(2) {
   left: 8.5em;
 }
-.menu-indicator .indicator-wrapper .box-wrapper .box:nth-of-type(3) {
+.skills__menu-indicator .skills__indicator-wrapper .skills__box-wrapper .skills__box:nth-of-type(3) {
   left: 12.75em;
 }
 
@@ -1764,7 +1765,7 @@ img {
   .skills__wrapper {
     height: 15rem;
   }
-  .menu-indicator {
+  .skills__menu-indicator {
     display: block;
   }
   .skills__list {
