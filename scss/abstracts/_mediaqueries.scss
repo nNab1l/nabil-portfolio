@@ -250,6 +250,15 @@
         border-bottom-right-radius: 0;
     }
 
+    .skills__wrapper{
+      
+        height: 15rem;
+    }
+
+    .menu-indicator{
+        display: block;
+    }
+
     .skills__list {
         display: flex;
         overflow-x: auto;
