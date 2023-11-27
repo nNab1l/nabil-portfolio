@@ -758,10 +758,11 @@ article:hover .projects__overlay {
 }
 
 .projects__git {
-  position: absolute;
-  top: 5%;
-  width: 6rem;
-  height: 6rem;
+  position: fixed;
+  bottom: 5%;
+  width: 7rem;
+  z-index: 99;
+  height: 7rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -774,7 +775,7 @@ article:hover .projects__overlay {
 }
 
 .projects__gitIcon {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #707070;
 }
 
@@ -978,9 +979,33 @@ img {
   font-size: 2.5rem;
 }
 
+.projects__modal--close {
+  padding-right: 2.5rem;
+  color: #707070;
+}
+
+.projects__close {
+  z-index: 99;
+  position: fixed;
+  display: flex;
+  display: none;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  top: 80%;
+  border-radius: 50%;
+  right: -4rem;
+  width: 8rem;
+  height: 8rem;
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.2);
+}
+.projects__close:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .projects__modalhead {
-    width: 100%;
+    width: 80%;
     padding-left: 2rem;
     margin-top: 12rem;
   }
@@ -1706,6 +1731,33 @@ img {
     flex-wrap: wrap;
     width: 100%;
     flex-direction: row;
+  }
+  .projects__modal--arrow {
+    display: none;
+  }
+  .projects__close {
+    display: flex;
+  }
+  .projects__git {
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    top: 65%;
+    border-radius: 50%;
+    right: -4rem;
+    width: 8rem;
+    height: 8rem;
+    box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.2);
+  }
+  .projects__git:hover {
+    cursor: pointer;
+  }
+  .projects__gitIcon {
+    padding-right: 2.5rem;
+    font-size: 2.5rem;
   }
   .projects__img {
     width: 100%;

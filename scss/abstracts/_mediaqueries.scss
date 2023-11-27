@@ -186,6 +186,38 @@
         flex-direction: row;
     }
 
+    .projects__modal--arrow{
+        display: none;
+    }
+
+    .projects__close{
+        display: flex;
+    }
+
+    .projects__git{
+        z-index: 99;
+        position: fixed;
+        display: flex;
+        background: white;
+        justify-content: center;
+        align-items: center;
+        top: 65%;
+        border-radius: 50%;
+        right: -4rem;
+        width: 8rem;
+        height: 8rem;
+        box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.2);
+    
+        &:hover{
+          cursor: pointer;
+        }
+      }
+
+      .projects__gitIcon{
+        padding-right: 2.5rem;
+        font-size: 2.5rem;
+      }
+
     .projects__img{
         width: 100%;
         height: 100%;

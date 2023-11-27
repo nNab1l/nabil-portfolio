@@ -405,6 +405,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const modals = document.querySelectorAll('.projects__modal');
   const closeButtons = document.querySelectorAll('.projects__modal--arrow');
+  const closeMobileBtns = document.querySelectorAll('.projects__close');
+  const mediaQuery = window.matchMedia('(max-width: 62.5rem)');
+  if (mediaQuery.matches) {
+    closeButtons.forEach(button => {
+      button.style.display = "none";
+    });
+  }
+  
   modals.forEach(modal => {
     closeButtons.forEach(closeButton => {
       closeButton.addEventListener('click', (event) => {
@@ -417,9 +425,16 @@ document.addEventListener('DOMContentLoaded', function () {
           sidenav.classList.remove('hidden-sidenav');
         }
       });
+      closeMobileBtns.forEach(closeMobileBtn => {
+        closeMobileBtn.addEventListener('click', (event) => {
+          modal.style.display = 'none';
+          document.documentElement.style.overflow = 'auto';
+          document.documentElement.style.overflowX = 'hidden';
+        })
     });
   });
 });
+})
 
 
 
